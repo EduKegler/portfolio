@@ -1,0 +1,83 @@
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .home-name { 
+        color: var(--blue-300);
+    }
+
+    .home-apresentation {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        :last-child {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@mixin home-stars($size, $shadow, $seconds) {
+    width: $size;
+    height: $size;
+    background: transparent;
+    box-shadow: $shadow;
+    animation: animStar $seconds linear infinite;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: $size;
+        height: $size;
+        background: transparent;
+        box-shadow: $shadow;
+    }
+}
+
+@function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px #FFF";
+    @for $i from 2 through $n {
+        $value: "#{$value}, #{random(2000)}px #{random(2000)}px #FFF";
+    }
+    @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+.home-background {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    position: absolute;
+
+    .home-stars-small {
+        @include home-stars(1px, $shadows-small, 50s);
+    }
+    .home-stars-medium {
+        @include home-stars(2px, $shadows-medium, 100s);
+    }
+    .home-stars-big {
+        @include home-stars(3px, $shadows-big, 150s);
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}

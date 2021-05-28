@@ -1,0 +1,10 @@
+.portfolio {
+    padding: 2rem 5rem;
+    min-height: 100vh;
+
+    .portfolio-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem
+    }
+}

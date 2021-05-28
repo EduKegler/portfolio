@@ -1,0 +1,17 @@
+.header { 
+    width: 100%;
+    background-color: var(--blue-200);
+    display: flex;
+    gap: 1rem;
+    padding: 0 5rem;
+
+    span { 
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--gray-800);
+        padding: 1rem;
+        &:hover {
+            background-color: var(--blue-300);
+        }
+    }
+}

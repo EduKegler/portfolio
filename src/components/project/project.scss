@@ -1,0 +1,31 @@
+.project {
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+    img,
+    .project-details {
+        transition: opacity 0.5s ease-out;
+    }
+
+    .project-details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.275rem;
+        display: none;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.25;
+        }
+        .project-details {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
