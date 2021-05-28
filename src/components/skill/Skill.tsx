@@ -1,14 +1,19 @@
 import React from 'react';
 import './skill.scss';
+interface SkillProps {
+  name: string;
+  description: string;
+  icon: React.ReactNode;
+}
 
-import lamp from '../../assets/images/lamp.png'
-
-const Skill = React.memo(() => {
+const Skill = React.memo(({ name, description, icon }: SkillProps) => {
   return (
     <div className='skill'>
-      <img src={lamp} alt='lamp' width={200} height={200} />
-      <h2>Responsive</h2>
-      <p>My layouts will work on any device, big or small.</p>
+      <div className='skill-icon'>
+        {icon}
+      </div>
+      <h2>{name}</h2>
+      <p>{description}</p>
     </div>
   )
 });

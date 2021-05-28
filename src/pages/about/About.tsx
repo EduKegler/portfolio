@@ -6,27 +6,34 @@ import Progress from '../../components/progress/Progress';
 import Skill from '../../components/skill/Skill';
 import SectionTitle from '../../components/sectionTitle/SectionTitle';
 import { useRefContext } from '../../components/app/App';
+import { Devices, Speed, LineWeight, TrendingUp } from '@material-ui/icons';
 
 const About = React.memo(() => {
+
     const { aboutRef } = useRefContext();
+
+    const skills = [
+        { name: 'Fast', description: 'Fast load times and lag free interaction, my highest priority.', icon: <Speed /> },
+        { name: 'Responsive', description: 'My layouts will work on any device, big or small.', icon: <Devices /> },
+        { name: 'Intuitive', description: 'My layouts will work on any device, big or small.', icon: <LineWeight /> },
+        { name: 'Dynamic', description: 'Websites don\'t have to be static, I love making pages come to life.', icon: <TrendingUp /> },
+    ]
 
     return (
         <section ref={aboutRef} className='about'>
-            <SectionTitle title='About' />
+            <SectionTitle title='ABOUT' />
             <div className='about-skills'>
-                <Skill />
-                <Skill />
-                <Skill />
-                <Skill />
+                {skills.map(skill => 
+                    <Skill key={skill.name} name={skill.name} description={skill.description} icon={skill.icon} />
+                )}
             </div>
             <div className='about-profile'>
                 <div className='about-bio'>
                     <img src={profile} alt='profile' width={200} height={200} />
-                    <h1>Who is this?</h1>
+                    <h1>Eduardo Kegler</h1>
                     <p>
                         Front-end developer with over 4 years of experience in web development, I worked with applications
                         from large companies focused on Real Estate and Work Safety.
-
                         Solid knowledge in Html, CSS and Javascript / Typescript and expertise in React.
                         Experiences with BDD, TDD, agile methodologies and backend languages like Java, PHP and C #.
                     </p>

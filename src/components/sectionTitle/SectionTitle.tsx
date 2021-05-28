@@ -9,6 +9,7 @@ const SectionTitle = React.memo(({ title }: SectionTitleProps) => {
     return (
         <div className='section-title'>
             <span>{title}</span>
+            <div className='section-divider' />
         </div>
     )
 });

@@ -4,15 +4,9 @@
     background-color: var(--gray-100);
     position: relative;
 
-    .progress-value {
-        background-color: var(--blue-200);
-        position: absolute;
-        width: 500px;
-        height: 30px;
-    }
-
     .progress-label {
         background-color: var(--blue-300);
+        color: var(--white);
         position: absolute;
         width: 100px;
         height: 30px;
@@ -20,6 +14,13 @@
         justify-content: center;
         align-items: center;
         font-weight: bold;
+    }
+
+    .progress-value {
+        background-color: var(--blue-200);
+        position: absolute;
+        width: 500px;
+        height: 30px;
     }
 
     .progress-percentage {

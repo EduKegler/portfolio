@@ -1,13 +1,12 @@
 .about {
     padding: 2rem 5rem;
     min-height: 100vh;
-    background-color: var(--gray-700);
 
     .about-skills {
         display: flex;
         gap: 1rem;
         justify-content: space-between;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
     .about-profile {

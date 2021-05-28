@@ -4,6 +4,23 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+
+    .skill-icon { 
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: var(--blue-200);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg { 
+            font-size: 3rem;
+            color: var(--white);
+        }
+    }
+
     img {
         border-radius: 50%;
     }

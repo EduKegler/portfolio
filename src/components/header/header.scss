@@ -1,17 +1,35 @@
-.header { 
+.header {
     width: 100%;
     background-color: var(--blue-200);
     display: flex;
     gap: 1rem;
     padding: 0 5rem;
+    z-index: 99999;
+    animation: all popDown 0.5s;
 
-    span { 
+    span {
         cursor: pointer;
         text-decoration: none;
         color: var(--gray-800);
         padding: 1rem;
-        &:hover {
+        &.header-item-active, &:hover {
             background-color: var(--blue-300);
+            color: var(--gray-100);
+            font-weight: 600;
         }
+    }
+}
+
+.header-sticky {
+    bottom: inherit;
+    left: 0;
+    position: sticky;
+    top: 0;
+    animation: popDown 0.5s;
+}
+
+@keyframes popDown {
+    0% {
+        transform: translateY(-100px);
     }
 }

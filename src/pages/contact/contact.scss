@@ -1,6 +1,7 @@
 .contact {
     padding: 2rem 5rem;
-    background-color: var(--gray-700);
+    height: calc(100vh - 46px);
+
     .contact-form  {
         text-align: center;
         display: flex;
