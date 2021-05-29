@@ -1,9 +1,15 @@
 .button {
-    background-color: var(--blue-200);
-    border: 0;
+    background-color: transparent;
+    color: var(--gray-100);
+    border: 1px solid var(--gray-100);
     padding: 1rem;
-    color: var(--gray-800);
-    border-radius: 5px;
     font-size: 1.25rem;
     font-weight: 500;
+
+    &:hover {
+        background-color: var(--blue-200);
+        color: var(--gray-800);
+        border: 1px solid var(--blue-200);
+
+    }
 }

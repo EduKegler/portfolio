@@ -1,7 +1,12 @@
 .portfolio {
-    padding: 2rem 5rem;
-    min-height: 100vh;
+    padding: 5rem 0;
     background-color: var(--gray-800);
+    min-height: 100vh;
+
+    .portfolio-container {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
     .portfolio-items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

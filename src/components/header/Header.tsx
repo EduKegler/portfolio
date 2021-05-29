@@ -33,6 +33,7 @@ const Header = React.memo(() => {
       setActive(handleSetActive());
     })
     sticky = headerRef?.current?.offsetTop;
+    handleScroll();
   }, []);
 
   console.log(active)
@@ -49,10 +50,10 @@ const Header = React.memo(() => {
 
   return (
     <nav ref={headerRef} className='header'>
-      <span className={isActive('home')} onClick={scrollToHome}>Home</span>
-      <span className={isActive('about')} onClick={scrollToAbout}>About</span>
-      <span className={isActive('portfolio')} onClick={scrollToPortfolio}>Portfolio</span>
-      <span className={isActive('contact')} onClick={scrollToContact}>Contact</span>
+      <span className={isActive('home')} onClick={scrollToHome}>HOME</span>
+      <span className={isActive('about')} onClick={scrollToAbout}>ABOUT</span>
+      <span className={isActive('portfolio')} onClick={scrollToPortfolio}>PORTFOLIO</span>
+      <span className={isActive('contact')} onClick={scrollToContact}>CONTACT</span>
     </nav>
   )
 });

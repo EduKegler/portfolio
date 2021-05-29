@@ -4,11 +4,16 @@ import './button.scss';
 interface ButtonProps {
   children: React.ReactChild;
   onClick?: () => void;
+  className?: string;
 }
 
-const Button = React.memo(({ children, onClick }: ButtonProps) => {
+const Button = React.memo(({ children, onClick, className }: ButtonProps) => {
+  
   return (
-    <button onClick={onClick} className='button'>{children}</button>
+    <button 
+      onClick={onClick} 
+      className={className ? `button ${className}` : 'button'}
+    >{children}</button>
   )
 });
 

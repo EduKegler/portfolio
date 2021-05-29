@@ -1,5 +1,6 @@
 .project {
     position: relative;
+
     img {
         height: 100%;
         width: 100%;
@@ -21,11 +22,27 @@
 
     &:hover {
         img {
-            opacity: 0.25;
+            opacity: 0.1;
         }
         .project-details {
-            display: block;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
             opacity: 1;
+
+            .project-title {
+                font-size: 2rem;
+            }
+            .project-stack {
+                align-self: center;
+                font-size: 1rem;
+                color: var(--blue-300);
+            }
+            .project-button {
+                margin-top: auto;
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
         }
     }
 }

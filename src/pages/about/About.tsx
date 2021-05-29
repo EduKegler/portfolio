@@ -43,7 +43,7 @@ const About = React.memo(() => {
                         <Progress label='Typescript' percentage={80} />
                         <Progress label='Git' percentage={80} />
                         <Progress label='Figma' percentage={50} />
-                        <Progress label='ReactNative' percentage={40} />
+                        <Progress label='React Native' percentage={40} />
                     </div>
                 </div>
             </div>

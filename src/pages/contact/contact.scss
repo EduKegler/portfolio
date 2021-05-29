@@ -1,13 +1,36 @@
 .contact {
-    padding: 2rem 5rem;
-    height: calc(100vh - 46px);
+    padding: 5rem 0;
+    min-height: calc(100vh - 150px);
+    .contact-container { 
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .contact-title { 
+        font-size: 1.75rem;
+        margin-bottom: 5rem;
+        color: var(--blue-300);
+    }
 
     .contact-form  {
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         margin: auto;
         gap: 1rem;
+        width: 500px;
+
+        input, textarea { 
+            outline: 0;
+            background-color: transparent;
+            border: 1px solid var(--gray-100);
+            padding: 1rem;
+        }
+    }
+
+    .contact-submit {
+        font-size: 1rem;
+        margin-left: auto;
+        inline-size: max-content;
     }
 }

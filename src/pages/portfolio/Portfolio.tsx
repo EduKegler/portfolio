@@ -9,14 +9,16 @@ const Portfolio = React.memo(() => {
 
     return (
         <section ref={portfolioRef} className='portfolio'>
-            <SectionTitle title='Portfolio' />
-            <div className='portfolio-items' >
-                <Project />
-                <Project />
-                <Project />
-                <Project />
-                <Project />
-                <Project />
+            <div className='portfolio-container'>
+                <SectionTitle title='PROJECTS' />
+                <div className='portfolio-items' >
+                    <Project />
+                    <Project />
+                    <Project />
+                    <Project />
+                    <Project />
+                    <Project />
+                </div>
             </div>
         </section>
     )

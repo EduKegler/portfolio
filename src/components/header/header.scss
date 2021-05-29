@@ -1,19 +1,17 @@
 .header {
     width: 100%;
-    background-color: var(--blue-200);
     display: flex;
     gap: 1rem;
     padding: 0 5rem;
     z-index: 99999;
-    animation: all popDown 0.5s;
-
+    background-color: var(--blue-300);
+    border-bottom: 2px solid var(--blue-200);
     span {
         cursor: pointer;
         text-decoration: none;
         color: var(--gray-800);
         padding: 1rem;
         &.header-item-active, &:hover {
-            background-color: var(--blue-300);
             color: var(--gray-100);
             font-weight: 600;
         }

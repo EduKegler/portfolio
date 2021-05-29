@@ -11,9 +11,9 @@ const project = React.memo(({ }: ProjectProps) => {
         <article className='project'>
             <img src={fathom} alt='project' />
             <div className="project-details">
-                <div>Intelliagent</div>
-                <div>React/Typescript/C#</div>
-                <Button>Details</Button>
+                <div className='project-title'>Intelliagent</div>
+                <div className='project-stack'>React/Typescript/C#</div>
+                <Button className='project-button'>DETAILS</Button>
             </div>
         </article>
     )

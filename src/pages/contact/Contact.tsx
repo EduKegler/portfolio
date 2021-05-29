@@ -9,14 +9,16 @@ const Contact = React.memo(() => {
 
     return (
         <section ref={contactRef} className='contact'>
-            <SectionTitle title='Contact' />
-            <form className='contact-form'>
-                Have a question or want to work together?
+            <div className='contact-container'>
+                <SectionTitle title='CONTACT' />
+                <form className='contact-form'>
+                <span className='contact-title'>Have a question or want to work together?</span>
                 <input type='text' placeholder='Name' />
-                <input type='email' placeholder='Enter Email' />
-                <textarea placeholder='Your message' />
-                <Button>Test</Button>
-            </form>
+                    <input type='email' placeholder='Enter Email' />
+                    <textarea placeholder='Your message' />
+                    <Button className='contact-submit'>SUBMIT</Button>
+                </form>
+            </div>
         </section>
     )
 });
