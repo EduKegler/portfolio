@@ -10,7 +10,7 @@ const Progress = React.memo(({ label, percentage }: ProgressProps) => {
 
   return (
     <div className='progress'>
-      <span className='progress-value'></span>
+      <span className='progress-value' style={{ width: percentage + '%'}} />
       <span className='progress-label'>{label}</span>
       <span className='progress-percentage'>{percentage}%</span>
     </div>
