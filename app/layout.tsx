@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "Eduardo Kegler Portfolio",
     images: [
       {
-        url: "https://yourportfolio.com/og-image.png",
+        url: "https://kegler.dev/og-image.png",
         width: 1200,
         height: 630,
         alt: "Eduardo Kegler Portfolio Preview",
