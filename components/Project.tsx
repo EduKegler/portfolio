@@ -42,8 +42,7 @@ function Project({ order, name, image, description, tags }: ProjectProps) {
       >
         <Image
           src={image}
-          // TODO: fix alt
-          alt="Picture of X Project"
+          alt={`Picture of ${name} Project`}
           sizes="100%"
           fill
           style={{
