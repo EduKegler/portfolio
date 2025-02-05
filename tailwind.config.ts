@@ -15,13 +15,11 @@ export default {
       },
       colors: {
         background: "var(--background)",
-        foreground: Color.foreground,
-        "foreground-light": Color.foregroundLight,
-        "foreground-muted": Color.foregroundMuted,
-
-        "border-color": Color.borderColor,
-
-        "background-light": Color.backgroundLight,
+        level1: Color.level1,
+        level2: Color.level2,
+        level3: Color.level3,
+        level4: Color.level4,
+        level5: Color.level5,
       },
     },
   },

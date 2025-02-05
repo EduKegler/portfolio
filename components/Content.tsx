@@ -14,7 +14,7 @@ import SectionContact from "./SectionContact";
 function Header() {
   return (
     <main className="flex flex-col justify-center items-center">
-      <section className="flex px-4 lg:px-20 min-h-[calc(100vh-144px)] items-end">
+      <section className="flex px-4 lg:px-20 min-h-[calc(100vh-229px)] lg:min-h-[calc(100vh-144px)] items-end">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <div className="relative w-[80px] h-[80px] sm:w-[125px] sm:h-[125px] md:w-[180px] md:h-[180px]">
@@ -29,7 +29,7 @@ function Header() {
                 }}
               />
             </div>
-            <TextDisplay1 color={Color.foreground}>Eduardo Kegler</TextDisplay1>
+            <TextDisplay1 color={Color.level1}>Eduardo Kegler</TextDisplay1>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
             <TextTitle2>
@@ -52,7 +52,6 @@ function Header() {
         <Divider />
       </div>
       <SectionSkills />
-
       <div className="px-4 lg:px-20 w-full py-20" id="contact">
         <Divider />
       </div>

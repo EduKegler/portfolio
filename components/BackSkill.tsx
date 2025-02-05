@@ -7,7 +7,7 @@ export type BackSkillProps = {
 
 function BackSkill({ label }: BackSkillProps) {
   return (
-    <div className="flex py-8 flex-1 border-[0.5px] border-solid border-foreground-light items-center justify-center">
+    <div className="flex py-8 flex-1 border-[0.5px] border-solid border-level2 items-center justify-center">
       <TextBody>{label}</TextBody>
     </div>
   );

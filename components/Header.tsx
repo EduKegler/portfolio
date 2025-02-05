@@ -4,7 +4,10 @@ import { memo } from "react";
 
 function Header() {
   return (
-    <header className="flex px-4 lg:px-20 gap-4 lg:gap-10 py-6 items-center">
+    <header
+      className="flex px-4 lg:px-20 gap-4 lg:gap-10 py-6 items-center"
+      id="about"
+    >
       <TextLabel1 className="whitespace-nowrap">
         Senior Software Engineer
       </TextLabel1>

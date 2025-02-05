@@ -1,6 +1,6 @@
 import TextBody from "@/primitives/TextBody";
 import TextDisplay2 from "@/primitives/TextDisplay2";
-import { memo } from "react";
+import { memo, ReactNode } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 import Tag from "../primitives/Tag";
@@ -11,7 +11,7 @@ export type ProjectProps = {
   order: "left" | "right";
   name: string;
   image: string | StaticImport;
-  description: string;
+  description: ReactNode;
   tags: string[];
 };
 
@@ -25,7 +25,7 @@ function Project({ order, name, image, description, tags }: ProjectProps) {
         )}
       >
         <div className="flex flex-col gap-4">
-          <TextDisplay2 color={Color.foreground}>{name}</TextDisplay2>
+          <TextDisplay2 color={Color.level1}>{name}</TextDisplay2>
           <TextBody>{description}</TextBody>
         </div>
         <div className="flex gap-2">
@@ -42,6 +42,7 @@ function Project({ order, name, image, description, tags }: ProjectProps) {
       >
         <Image
           src={image}
+          priority
           alt={`Picture of ${name} Project`}
           sizes="100%"
           fill

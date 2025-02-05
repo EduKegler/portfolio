@@ -13,7 +13,7 @@ function TextBase({
   children,
   className,
   style,
-  color = Color.foregroundLight,
+  color = Color.level2,
   as: Component = "span",
 }: TextBaseProps) {
   return (

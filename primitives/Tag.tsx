@@ -9,8 +9,8 @@ type TagProps = {
 function Tag({ children }: TagProps) {
   return (
     <TextLabel2
-      color={Color.foreground}
-      className="px-2 py-1 bg-background-light rounded-full"
+      color={Color.level1}
+      className="px-2 py-1 bg-level5 rounded-full"
     >
       {children}
     </TextLabel2>

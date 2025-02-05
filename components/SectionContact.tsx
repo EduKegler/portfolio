@@ -18,7 +18,7 @@ function SectionContact() {
         className="rounded-full"
       />
       <div className="flex flex-col gap-10 lg:gap-20">
-        <TextDisplay2 color={Color.foreground}>Let&apos;s Connect</TextDisplay2>
+        <TextDisplay2 color={Color.level1}>Let&apos;s Connect</TextDisplay2>
         <div className="flex flex-col gap-10">
           <div>
             <TextTitle2>
@@ -30,22 +30,20 @@ function SectionContact() {
           </div>
           <div className="flex flex-col lg:flex-row gap-6 lg:justify-between">
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.foregroundMuted}>
-                Get in touch
-              </TextTitle3>
+              <TextTitle3 color={Color.level4}>Get in touch</TextTitle3>
               <a href="mailto:eduardokegler1@gmail.com">
                 <TextBody>eduardokegler1@gmail.com</TextBody>
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.foregroundMuted}>Phone</TextTitle3>
+              <TextTitle3 color={Color.level4}>Phone</TextTitle3>
               <a href="phone:+5548984148966">
                 <TextBody>+5548984148966</TextBody>
               </a>
             </div>
 
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.foregroundMuted}>LinkedIn</TextTitle3>
+              <TextTitle3 color={Color.level4}>LinkedIn</TextTitle3>
               <a
                 href="https://www.linkedin.com/in/eduardokegler/"
                 target="_blank"
@@ -54,7 +52,7 @@ function SectionContact() {
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.foregroundMuted}>Github</TextTitle3>
+              <TextTitle3 color={Color.level4}>Github</TextTitle3>
               <a href="https://github.com/EduKegler" target="_blank">
                 <TextBody>EduKegler</TextBody>
               </a>

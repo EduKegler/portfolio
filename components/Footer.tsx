@@ -6,7 +6,7 @@ import Image from "next/image";
 function Footer() {
   const currentDate = new Date().getFullYear();
   return (
-    <footer className="flex px-4 lg:px-20 gap-2 w-full pb-10 pt-20 lg:py-20 items-center">
+    <footer className="flex px-4 lg:px-20 gap-2 w-full pb-32 pt-20 lg:py-20 items-center">
       <Image
         src={Copy}
         alt={""}

@@ -70,7 +70,7 @@ function SectionSkills() {
 
         <div className="flex flex-col gap-10">
           <TextTitle2>Backend and Testing & DevOps</TextTitle2>
-          <div className="border-[0.5px] border-solid border-foreground-light">
+          <div className="border-[0.5px] border-solid border-level2">
             <div className="flex justify-between items-center">
               {backSkills1.map((skill) => (
                 <BackSkill key={skill.label} label={skill.label} />

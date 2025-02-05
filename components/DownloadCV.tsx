@@ -4,9 +4,9 @@ import { memo } from "react";
 
 function DownloadCV() {
   return (
-    <div className="px-8 py-4 rounded-full border-solid border border-foreground h-fit w-fit whitespace-nowrap ">
+    <div className="px-8 py-4 rounded-full border-solid border border-level1 h-fit w-fit whitespace-nowrap ">
       <a className=" whitespace-nowrap " href="cv.pdf" target="_blank">
-        <TextBody as="span" color={Color.foreground}>
+        <TextBody as="span" color={Color.level1}>
           Download Resume
         </TextBody>
       </a>

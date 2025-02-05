@@ -7,9 +7,7 @@ type DividerProps = {
 function Divider({ className }: DividerProps) {
   return (
     <div
-      className={`w-full  border-t border-border-color ${
-        className ? className : ""
-      }`}
+      className={`w-full  border-t border-level5 ${className ? className : ""}`}
     ></div>
   );
 }
