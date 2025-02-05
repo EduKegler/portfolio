@@ -33,7 +33,7 @@ function Header() {
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
             <TextTitle2>
-              Senior Software Engineer passwionate about building reusable
+              Senior Software Engineer passionate about building reusable
               frontend architectures and driving innovation.
             </TextTitle2>
             <DownloadCV />
