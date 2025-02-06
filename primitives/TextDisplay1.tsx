@@ -10,9 +10,10 @@ function TextDisplay1({ children, as = "h2", ...props }: TextDisplay1Props) {
       as={as}
       {...props}
       className={clsx(
-        "text-[24vw] leading-[24vw]",
+        "text-[24vw] leading-[24vw] font-semibold",
         "sm:text-[100px] sm:leading-[106px]",
-        "lg:text-[160px] lg:leading-[170px] font-semibold",
+        "md:text-[112px] sm:leading-[120px]",
+        "lg:text-[134px] lg:leading-[140px] ",
         props.className
       )}
     >

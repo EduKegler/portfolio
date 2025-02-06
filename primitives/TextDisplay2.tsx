@@ -11,7 +11,8 @@ function TextDisplay2({ children, as = "h2", ...props }: TextDisplay2Props) {
       {...props}
       className={clsx(
         "text-[48px] leading-[52px]",
-        "lg:text-[80px] lg:leading-[96px]",
+        "md:text-[52px] md:leading-[60px]",
+        "lg:text-[64px] lg:leading-[72px]",
         props.className
       )}
     >
