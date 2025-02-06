@@ -4,4 +4,5 @@ export const enum Color {
   level3 = "#55576B",
   level4 = "#8B8BA7",
   level5 = "#E2E2E9",
+  inherit = "inherit",
 }

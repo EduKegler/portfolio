@@ -7,7 +7,7 @@ type TextTitle1Props = TextBaseProps & HTMLAttributes<HTMLSpanElement>;
 function TextTitle1({ children, ...props }: TextTitle1Props) {
   return (
     <TextBase
-      as="span"
+      as="h3"
       {...props}
       className={clsx(
         "text-[24px] leading-[28px]",

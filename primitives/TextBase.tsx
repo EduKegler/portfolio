@@ -6,7 +6,7 @@ export type TextBaseProps = {
   className?: string;
   style?: CSSProperties;
   color?: Color;
-  as?: "span" | "h2" | "a";
+  as?: "span" | "h1" | "h2" | "h3" | "h4" | "a" | "p";
 };
 
 function TextBase({

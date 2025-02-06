@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 type TextDisplay1Props = TextBaseProps & HTMLAttributes<HTMLHeadElement>;
 
-function TextDisplay1({ children, as = "h2", ...props }: TextDisplay1Props) {
+function TextDisplay1({ children, as = "h1", ...props }: TextDisplay1Props) {
   return (
     <TextBase
       as={as}

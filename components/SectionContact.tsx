@@ -31,13 +31,16 @@ function SectionContact() {
           <div className="flex flex-col lg:flex-row gap-6 lg:justify-between">
             <div className="flex flex-col gap-2">
               <TextTitle3 color={Color.level4}>Get in touch</TextTitle3>
-              <a href="mailto:eduardokegler1@gmail.com">
+              <a
+                href="mailto:eduardokegler1@gmail.com"
+                className="hover:opacity-60"
+              >
                 <TextBody>eduardokegler1@gmail.com</TextBody>
               </a>
             </div>
             <div className="flex flex-col gap-2">
               <TextTitle3 color={Color.level4}>Phone</TextTitle3>
-              <a href="phone:+5548984148966">
+              <a href="phone:+5548984148966" className="hover:opacity-60">
                 <TextBody>+5548984148966</TextBody>
               </a>
             </div>
@@ -47,13 +50,18 @@ function SectionContact() {
               <a
                 href="https://www.linkedin.com/in/eduardokegler/"
                 target="_blank"
+                className="hover:opacity-60"
               >
                 <TextBody>eduardokegler</TextBody>
               </a>
             </div>
             <div className="flex flex-col gap-2">
               <TextTitle3 color={Color.level4}>Github</TextTitle3>
-              <a href="https://github.com/EduKegler" target="_blank">
+              <a
+                href="https://github.com/EduKegler"
+                target="_blank"
+                className="hover:opacity-60"
+              >
                 <TextBody>EduKegler</TextBody>
               </a>
             </div>

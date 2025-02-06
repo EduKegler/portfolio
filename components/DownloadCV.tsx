@@ -1,16 +1,20 @@
-import { Color } from "@/contants/colors";
-import TextBody from "@/primitives/TextBody";
+import clsx from "clsx";
 import { memo } from "react";
 
 function DownloadCV() {
   return (
-    <div className="px-8 py-4 rounded-full border-solid border border-level1 h-fit w-fit whitespace-nowrap ">
-      <a className=" whitespace-nowrap " href="cv.pdf" target="_blank">
-        <TextBody as="span" color={Color.level1}>
-          Download Resume
-        </TextBody>
-      </a>
-    </div>
+    <a
+      className={clsx(
+        "whitespace-nowrap",
+        "text-[16px] leading-[20px]",
+        "lg:text-[20px] lg:leading-[24px]",
+        "px-8 py-4 hover:opacity-60 rounded-full border-solid border border-level1"
+      )}
+      href="cv.pdf"
+      target="_blank"
+    >
+      Download Resume
+    </a>
   );
 }
 

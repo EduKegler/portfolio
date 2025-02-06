@@ -5,7 +5,7 @@ import clsx from "clsx";
 type TextBodyProps = TextBaseProps &
   (HTMLAttributes<HTMLSpanElement> | HTMLAttributes<HTMLAnchorElement>);
 
-function TextBody({ children, as = "span", ...props }: TextBodyProps) {
+function TextBody({ children, as = "p", ...props }: TextBodyProps) {
   return (
     <TextBase
       as={as}

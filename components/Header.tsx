@@ -13,16 +13,16 @@ function Header() {
       </TextLabel1>
       <Divider />
       <nav className="hidden lg:flex gap-6 ">
-        <a href="#projects">
+        <a href="#projects" className="hover:opacity-60">
           <TextLabel1>Projects</TextLabel1>
         </a>
-        <a href="#experience">
+        <a href="#experience" className="hover:opacity-60">
           <TextLabel1>Experience</TextLabel1>
         </a>
-        <a href="#skills">
+        <a href="#skills" className="hover:opacity-60">
           <TextLabel1>Skills</TextLabel1>
         </a>
-        <a href="#contact">
+        <a href="#contact" className="hover:opacity-60">
           <TextLabel1>Contact</TextLabel1>
         </a>
       </nav>

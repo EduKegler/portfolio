@@ -41,7 +41,7 @@ function Menu() {
     <nav className="flex items-center py-4 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
       {menuItems.map((item) => (
         <a
-          className="flex flex-1 items-center flex-col gap-2"
+          className="flex flex-1 items-center flex-col gap-2 text-level3 hover:text-level1"
           key={item.name}
           href={item.href}
         >
@@ -51,7 +51,7 @@ function Menu() {
             width={24}
             height={24}
           />
-          <TextBody color={Color.level3}>{item.name}</TextBody>
+          <TextBody color={Color.inherit}>{item.name}</TextBody>
         </a>
       ))}
     </nav>

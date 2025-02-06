@@ -36,7 +36,7 @@ function Project({ order, name, image, description, tags }: ProjectProps) {
       </div>
       <div
         className={clsx(
-          "relative w-[90vw] h-[80vw] sm:w-[380px] sm:h-[300px] lg:w-[430px] lg:h-[335px] self-center md:flex-[5]",
+          "relative w-[90vw] h-[80vw] sm:w-[350px] sm:h-[280px] lg:w-[430px] lg:h-[335px] self-center md:flex-[5]",
           order === "left" ? "md:order-2" : "md:order-1"
         )}
       >
