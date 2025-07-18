@@ -13,7 +13,7 @@ function SectionContact() {
   return (
     <motion.section
       className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full"
-      initial={{ opacity: 0, y: -100 }}
+      initial={{ opacity: 0, y: 100 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
