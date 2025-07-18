@@ -10,12 +10,13 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 export type ProjectProps = {
   order: "left" | "right";
   name: string;
+  company: string;
   image: string | StaticImport;
   description: ReactNode;
   tags: string[];
 };
 
-function Project({ order, name, image, description, tags }: ProjectProps) {
+function Project({ order, name, image, company, description, tags }: ProjectProps) {
   return (
     <article className="flex flex-col md:flex-row gap-20 items-center">
       <div
@@ -25,10 +26,13 @@ function Project({ order, name, image, description, tags }: ProjectProps) {
         )}
       >
         <div className="flex flex-col gap-4">
-          <TextDisplay2 color={Color.level1}>{name}</TextDisplay2>
+          <div className="flex flex-col">
+            <TextDisplay2 color={Color.level1}>{name}</TextDisplay2>
+            <TextBody color={Color.level1} as="span" className="text-wrap">{`@ ${company}`}</TextBody>
+          </div>
           <TextBody>{description}</TextBody>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           {tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}

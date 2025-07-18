@@ -36,9 +36,7 @@ function Header() {
               Senior Software Engineer passionate about building reusable
               frontend architectures and driving innovation.
             </TextTitle2>
-            <div className="mt-4">
-              <DownloadCV />
-            </div>
+            <DownloadCV />
           </div>
         </div>
       </section>

@@ -5,8 +5,8 @@ import Experience from "@/assets/menu/experience.svg";
 import Skills from "@/assets/menu/skills.svg";
 import Contact from "@/assets/menu/contact.svg";
 import Image from "next/image";
-import TextBody from "@/primitives/TextBody";
 import { Color } from "@/contants/colors";
+import TextLabel1 from "@/primitives/TextLabel1";
 
 const menuItems = [
   {
@@ -38,7 +38,7 @@ const menuItems = [
 
 function Menu() {
   return (
-    <nav className="flex items-center py-4 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
+    <nav className="flex items-center py-2 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
       {menuItems.map((item) => (
         <a
           className="flex flex-1 items-center flex-col gap-2 text-level3 hover:text-level1"
@@ -51,7 +51,7 @@ function Menu() {
             width={24}
             height={24}
           />
-          <TextBody color={Color.inherit}>{item.name}</TextBody>
+          <TextLabel1 color={Color.inherit}>{item.name}</TextLabel1>
         </a>
       ))}
     </nav>

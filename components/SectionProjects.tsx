@@ -1,3 +1,4 @@
+"use client";
 import TextTitle1 from "@/primitives/TextTitle1";
 import { memo } from "react";
 import Project, { ProjectProps } from "./Project";
@@ -5,10 +6,36 @@ import Divider from "@/primitives/Divider";
 import AppSwitcher from "@/assets/projects/app-switcher.png";
 import SignIn from "@/assets/projects/sign-in.png";
 import SignUp from "@/assets/projects/sign-up.png";
+import { motion } from "motion/react";
 
 const projects: Omit<ProjectProps, "order">[] = [
   {
+    name: "DEX",
+    company: "GTE",
+    image: SignIn,
+    description: (
+      <>
+        gte.xyz is an all-in-one DeFi platform built on the MegaETH network,
+        combining a portfolio tracker, AMM, token launchpad, central limit order
+        book (CLOB), and perpetuals trading into a unified interface.
+        <br />
+        <br />
+        I led the front-end development using React, TypeScript, and Web3
+        technologies, delivering modular components and seamless wallet
+        connectivity. The platform provides real-time insights into wallet
+        balances, PnL, and open positions, while enabling users to trade, swap,
+        and explore new tokens, all in one place.
+        <br />
+        <br />
+        This integrated experience enhances accessibility to advanced DeFi tools
+        while maintaining performance and usability.
+      </>
+    ),
+    tags: ["React", "Typescript", "Javascript", "Web3", "Next.js", "Viem", "Privy"],
+  },
+  {
     name: "App Switcher",
+    company: "Coinbase",
     image: AppSwitcher,
     description: (
       <>
@@ -36,6 +63,7 @@ const projects: Omit<ProjectProps, "order">[] = [
   },
   {
     name: "Sign In with Wallet",
+    company: "Coinbase",
     image: SignIn,
     description: (
       <>
@@ -55,10 +83,11 @@ const projects: Omit<ProjectProps, "order">[] = [
         maintaining robust security protocols.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript", "Web3", "OAuth"],
+    tags: ["React", "Typescript", "Javascript", "Web3", "OAuth", "Wagmi", "Viem"],
   },
   {
     name: "Unified Sign Up",
+    company: "Coinbase",
     image: SignUp,
     description: (
       <>
@@ -82,23 +111,57 @@ const projects: Omit<ProjectProps, "order">[] = [
     ),
     tags: ["React", "Typescript", "Javascript"],
   },
+  {
+    name: "IntelliAgent",
+    company: "Fathom Realty",
+    image: SignUp,
+    description: (
+      <>
+        IntelliAgent is a real estate operations platform built for agents at
+        Fathom Realty in North Carolina.
+        <br />
+        <br />
+        It streamlines the full transaction workflow. Client prospecting, fee
+        tracking, and end-to-end deal management, tailored to the daily needs of
+        real estate professionals.
+        <br />
+        <br />I designed and implemented the entire design system and led the
+        front-end architecture using React and TypeScript, creating reusable
+        components and consistent UI patterns to support scalability, usability,
+        and team collaboration.
+      </>
+    ),
+    tags: ["React", "Typescript", "Javascript", "Redux", "Tailwind"],
+  },
 ];
 function SectionProjects() {
   return (
-    <section className="px-4 lg:px-20 flex flex-col gap-10 lg:gap-20">
+    <section className="px-4 lg:px-20 flex flex-col gap-10 lg:gap-20 overflow-hidden">
       <TextTitle1>Projects</TextTitle1>
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-hidden">
         {projects.map((project, index) => (
-          <div key={project.name} className="flex flex-col">
+          <motion.div
+            initial={{
+              opacity: 0,
+              transform: `translateX(${index % 2 === 0 ? -200 : 200}px)`,
+            }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            style={{ willChange: "transform" }}
+            key={project.name}
+            className="flex flex-col"
+          >
             {index !== 0 && <Divider className="my-20" />}
             <Project
               name={project.name}
               image={project.image}
+              company={project.company}
               description={project.description}
               tags={project.tags}
               order={index % 2 === 0 ? "left" : "right"}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

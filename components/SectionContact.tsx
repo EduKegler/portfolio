@@ -1,3 +1,4 @@
+"use client";
 import TextBody from "@/primitives/TextBody";
 import TextTitle2 from "@/primitives/TextTitle2";
 import TextTitle3 from "@/primitives/TextTitle3";
@@ -6,10 +7,17 @@ import { Color } from "@/contants/colors";
 import ProfileImage from "@/assets/profile.jpg";
 import Image from "next/image";
 import TextDisplay2 from "@/primitives/TextDisplay2";
+import { motion } from "motion/react";
 
 function SectionContact() {
   return (
-    <section className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full">
+    <motion.section
+      className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full"
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
       <Image
         src={ProfileImage}
         alt={""}
@@ -68,7 +76,7 @@ function SectionContact() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
