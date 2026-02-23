@@ -42,8 +42,8 @@ const backSkills2: FrontSkillProps[] = [
 function SectionSkills() {
   return (
     <section className="px-4 lg:px-20 flex flex-col lg:flex-row gap-10 w-full">
-      <TextLabel1 className="flex-[2]">SKILLS</TextLabel1>
-      <div className="flex flex-[10] flex-col gap-20">
+      <TextLabel1 className="flex-2">SKILLS</TextLabel1>
+      <div className="flex flex-10 flex-col gap-20">
         <div className="flex flex-col gap-10">
           <TextTitle2>Frontend Stack</TextTitle2>
           <div className="flex flex-col lg:flex-row w-full gap-10 lg:gap-6">

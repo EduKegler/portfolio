@@ -21,7 +21,7 @@ function Project({ order, name, image, company, description, tags }: ProjectProp
     <article className="flex flex-col md:flex-row gap-20 items-center">
       <div
         className={clsx(
-          "flex flex-col gap-6 md:flex-[7]",
+          "flex flex-col gap-6 md:flex-7",
           order === "left" ? "md:order-1" : "md:order-2"
         )}
       >
@@ -40,7 +40,7 @@ function Project({ order, name, image, company, description, tags }: ProjectProp
       </div>
       <div
         className={clsx(
-          "relative w-[90vw] h-[80vw] sm:w-[350px] sm:h-[280px] lg:w-[430px] lg:h-[335px] self-center md:flex-[5]",
+          "relative w-[90vw] h-[80vw] sm:w-[350px] sm:h-[280px] lg:w-[430px] lg:h-[335px] self-center md:flex-5",
           order === "left" ? "md:order-2" : "md:order-1"
         )}
       >

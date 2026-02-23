@@ -9,8 +9,8 @@ import { Color } from "@/contants/colors";
 function SectionJobs() {
   return (
     <section className="px-4 lg:px-20 flex flex-col lg:flex-row gap-10">
-      <TextLabel1 className="flex-[2]">EXPERIENCE</TextLabel1>
-      <div className="flex flex-[10] flex-col gap-10 lg:gap-20">
+      <TextLabel1 className="flex-2">EXPERIENCE</TextLabel1>
+      <div className="flex flex-10 flex-col gap-10 lg:gap-20">
         <TextTitle2 as="h4">
           Senior Frontend Engineer with 7+ years of experience building
           highperformance, scalable web applications across Real Estate, Work
