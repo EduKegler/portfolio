@@ -29,84 +29,78 @@
   }
 }
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #2F314C;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
     --background: #0a0a0a;
     --foreground: #2F314C;
   }
-}
 
-html {
-  scroll-behavior: smooth;
-  background: linear-gradient(
-    133.07deg, 
-    rgba(255, 180, 176, 0.1) 0%, 
-    rgba(255, 221, 201, 0.1) 34.41%, 
-    rgba(207, 255, 223, 0) 44.95%, 
-    rgba(189, 238, 254, 0.1) 54.15%, 
-    rgba(191, 185, 255, 0.1) 63.12%)
-  
-}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #2F314C;
+    }
+  }
 
-body {
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+  html {
+    scroll-behavior: smooth;
+    background: linear-gradient(
+      133.07deg,
+      rgba(255, 180, 176, 0.1) 0%,
+      rgba(255, 221, 201, 0.1) 34.41%,
+      rgba(207, 255, 223, 0) 44.95%,
+      rgba(189, 238, 254, 0.1) 54.15%,
+      rgba(191, 185, 255, 0.1) 63.12%);
+  }
 
-button {
+  body {
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button {
     border: 0;
     padding: 0;
-}
+  }
 
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+  /* 1. Use a more-intuitive box-sizing model */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
 
-body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
+  /* 3. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
 
-/* 5. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
+  /* 4. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
 
-/* 6. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
-}
+  /* 5. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
 
-/* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
+  /* 6. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
 
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+  /* 7. Create a root stacking context */
+  #root, #__next {
+    isolation: isolate;
+  }
 }
