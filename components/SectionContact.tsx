@@ -20,7 +20,7 @@ function SectionContact() {
     >
       <Image
         src={ProfileImage}
-        alt={""}
+        alt="Picture of Eduardo"
         width={80}
         height={80}
         className="rounded-full"
@@ -29,10 +29,10 @@ function SectionContact() {
         <TextDisplay2 color={Color.level1}>Let&apos;s Connect</TextDisplay2>
         <div className="flex flex-col gap-10">
           <div>
-            <TextTitle2>
+            <TextTitle2 as="p">
               Feel free to contact me if having any questions.
             </TextTitle2>
-            <TextTitle2>
+            <TextTitle2 as="p">
               I&apos;m available for new projects or just for chatting.
             </TextTitle2>
           </div>
@@ -48,7 +48,7 @@ function SectionContact() {
             </div>
             <div className="flex flex-col gap-2">
               <TextTitle3 color={Color.level4}>Phone</TextTitle3>
-              <a href="phone:+5548984148966" className="hover:opacity-60">
+              <a href="tel:+5548984148966" className="hover:opacity-60">
                 <TextBody>+5548984148966</TextBody>
               </a>
             </div>
@@ -58,6 +58,7 @@ function SectionContact() {
               <a
                 href="https://www.linkedin.com/in/eduardokegler/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:opacity-60"
               >
                 <TextBody>eduardokegler</TextBody>
@@ -68,6 +69,7 @@ function SectionContact() {
               <a
                 href="https://github.com/EduKegler"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:opacity-60"
               >
                 <TextBody>EduKegler</TextBody>

@@ -32,7 +32,7 @@ function Header() {
             <TextDisplay1 color={Color.level1}>Eduardo Kegler</TextDisplay1>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
-            <TextTitle2 as="h4">
+            <TextTitle2 as="p">
               Senior Software Engineer passionate about building reusable
               frontend architectures and driving innovation.
             </TextTitle2>

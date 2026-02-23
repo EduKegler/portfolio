@@ -9,7 +9,7 @@ function Footer() {
     <footer className="flex px-4 lg:px-20 gap-2 w-full pb-32 pt-20 lg:py-20 items-center">
       <Image
         src={Copy}
-        alt={""}
+        alt="Copyright"
         width={24}
         height={24}
         className="rounded-full"
