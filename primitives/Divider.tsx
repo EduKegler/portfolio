@@ -1,14 +1,15 @@
+import clsx from "clsx";
 import { memo } from "react";
 
 type DividerProps = {
   className?: string;
 };
-// TODO: move color to constant
+
 function Divider({ className }: DividerProps) {
   return (
     <div
-      className={`w-full  border-t border-level5 ${className ? className : ""}`}
-    ></div>
+      className={clsx("w-full border-t border-level5", className)}
+    />
   );
 }
 export default memo(Divider);

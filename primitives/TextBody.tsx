@@ -5,7 +5,7 @@ import clsx from "clsx";
 type TextBodyProps = TextBaseProps &
   (HTMLAttributes<HTMLSpanElement> | HTMLAttributes<HTMLAnchorElement>);
 
-function TextBody({ children, as = "p", ...props }: TextBodyProps) {
+function TextBody({ children, as = "p", className, ...props }: TextBodyProps) {
   return (
     <TextBase
       as={as}
@@ -13,9 +13,8 @@ function TextBody({ children, as = "p", ...props }: TextBodyProps) {
       className={clsx(
         "text-[16px] leading-[20px]",
         "lg:text-[20px] lg:leading-[24px]",
-        props.className
+        className
       )}
-      {...props}
     >
       {children}
     </TextBase>

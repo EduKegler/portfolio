@@ -8,12 +8,11 @@ import SectionProjects from "./SectionProjects";
 import SectionJobs from "./SectionJobs";
 import SectionSkills from "./SectionSkills";
 import DownloadCV from "./DownloadCV";
-import { Color } from "@/contants/colors";
 import SectionContact from "./SectionContact";
 
-function Header() {
+function Content() {
   return (
-    <main className="flex flex-col justify-center items-center">
+    <main id="main-content" className="flex flex-col justify-center items-center">
       <section className="flex px-4 lg:px-20 min-h-[calc(100vh-229px)] lg:min-h-[calc(100vh-144px)] items-end">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-4">
@@ -21,7 +20,7 @@ function Header() {
               <Image
                 src={ProfileImage}
                 alt="Picture of Eduardo"
-                sizes="100%"
+                sizes="(max-width: 414px) 80px, (max-width: 768px) 125px, 180px"
                 fill
                 className="rounded-full"
                 style={{
@@ -29,7 +28,7 @@ function Header() {
                 }}
               />
             </div>
-            <TextDisplay1 color={Color.level1}>Eduardo Kegler</TextDisplay1>
+            <TextDisplay1 color="level1">Eduardo Kegler</TextDisplay1>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
             <TextTitle2 as="p">
@@ -60,4 +59,4 @@ function Header() {
   );
 }
 
-export default memo(Header);
+export default memo(Content);

@@ -3,7 +3,6 @@ import TextBody from "@/primitives/TextBody";
 import TextTitle2 from "@/primitives/TextTitle2";
 import TextTitle3 from "@/primitives/TextTitle3";
 import { memo } from "react";
-import { Color } from "@/contants/colors";
 import ProfileImage from "@/assets/profile.jpg";
 import Image from "next/image";
 import TextDisplay2 from "@/primitives/TextDisplay2";
@@ -26,7 +25,7 @@ function SectionContact() {
         className="rounded-full"
       />
       <div className="flex flex-col gap-10 lg:gap-20">
-        <TextDisplay2 color={Color.level1}>Let&apos;s Connect</TextDisplay2>
+        <TextDisplay2 color={"level1"}>Let&apos;s Connect</TextDisplay2>
         <div className="flex flex-col gap-10">
           <div>
             <TextTitle2 as="p">
@@ -38,39 +37,42 @@ function SectionContact() {
           </div>
           <div className="flex flex-col lg:flex-row gap-6 lg:justify-between">
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.level4}>Get in touch</TextTitle3>
+              <TextTitle3 color={"level4"}>Get in touch</TextTitle3>
               <a
                 href="mailto:eduardokegler1@gmail.com"
                 className="hover:opacity-60"
+                aria-label="Send email to eduardokegler1@gmail.com"
               >
                 <TextBody>eduardokegler1@gmail.com</TextBody>
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.level4}>Phone</TextTitle3>
-              <a href="tel:+5548984148966" className="hover:opacity-60">
+              <TextTitle3 color={"level4"}>Phone</TextTitle3>
+              <a href="tel:+5548984148966" className="hover:opacity-60" aria-label="Call +5548984148966">
                 <TextBody>+5548984148966</TextBody>
               </a>
             </div>
 
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.level4}>LinkedIn</TextTitle3>
+              <TextTitle3 color={"level4"}>LinkedIn</TextTitle3>
               <a
                 href="https://www.linkedin.com/in/eduardokegler/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-60"
+                aria-label="Visit Eduardo Kegler's LinkedIn profile"
               >
                 <TextBody>eduardokegler</TextBody>
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <TextTitle3 color={Color.level4}>Github</TextTitle3>
+              <TextTitle3 color={"level4"}>Github</TextTitle3>
               <a
                 href="https://github.com/EduKegler"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-60"
+                aria-label="Visit Eduardo Kegler's GitHub profile"
               >
                 <TextBody>EduKegler</TextBody>
               </a>

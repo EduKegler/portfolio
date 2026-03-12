@@ -15,8 +15,8 @@ function FrontSkill({ image, label }: FrontSkillProps) {
       <div className={clsx("relative w-[48px] h-[48px]")}>
         <Image
           src={image}
-          alt={`Logo of ${label} skill}`}
-          sizes="100%"
+          alt={`Logo of ${label} skill`}
+          sizes="48px"
           fill
           style={{
             objectFit: "contain",

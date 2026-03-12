@@ -12,7 +12,7 @@ function Header() {
         Senior Software Engineer
       </TextLabel1>
       <Divider />
-      <nav className="hidden lg:flex gap-6 ">
+      <nav aria-label="Main navigation" className="hidden lg:flex gap-6">
         <a href="#projects" className="hover:opacity-60">
           <TextLabel1>Projects</TextLabel1>
         </a>

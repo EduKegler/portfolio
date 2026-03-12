@@ -162,6 +162,7 @@ function SectionProjects() {
               description={project.description}
               tags={project.tags}
               order={index % 2 === 0 ? "left" : "right"}
+              priority={index === 0}
             />
           </motion.div>
         ))}

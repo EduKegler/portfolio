@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
+import Providers from "@/components/Providers";
+import SkipNavigation from "@/components/SkipNavigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kegler.dev"),
@@ -94,7 +96,10 @@ export default function RootLayout({
           gtag('config', 'G-MB2VZ76TZN');
         `}
       </Script>
-      <body className={`antialiased max-w-[1280px] mx-auto`}>{children}</body>
+      <body className="antialiased max-w-[1280px] mx-auto">
+        <SkipNavigation />
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

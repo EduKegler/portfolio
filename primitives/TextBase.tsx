@@ -1,23 +1,33 @@
-import { Color } from "@/contants/colors";
+import type { TextColor } from "@/constants/colors";
+import clsx from "clsx";
 import { CSSProperties, memo, ReactNode } from "react";
 
 export type TextBaseProps = {
   children: ReactNode;
   className?: string;
   style?: CSSProperties;
-  color?: Color;
+  color?: TextColor;
   as?: "span" | "h1" | "h2" | "h3" | "h4" | "a" | "p";
+};
+
+const colorClasses: Record<TextColor, string> = {
+  level1: "text-level1",
+  level2: "text-level2",
+  level3: "text-level3",
+  level4: "text-level4",
+  level5: "text-level5",
+  inherit: "text-inherit",
 };
 
 function TextBase({
   children,
   className,
   style,
-  color = Color.level2,
+  color = "level2",
   as: Component = "span",
 }: TextBaseProps) {
   return (
-    <Component className={className} style={{ ...style, color }}>
+    <Component className={clsx(colorClasses[color], className)} style={style}>
       {children}
     </Component>
   );

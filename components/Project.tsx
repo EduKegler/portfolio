@@ -4,7 +4,6 @@ import { memo, ReactNode } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 import Tag from "../primitives/Tag";
-import { Color } from "@/contants/colors";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export type ProjectProps = {
@@ -14,9 +13,10 @@ export type ProjectProps = {
   image: string | StaticImport;
   description: ReactNode;
   tags: string[];
+  priority?: boolean;
 };
 
-function Project({ order, name, image, company, description, tags }: ProjectProps) {
+function Project({ order, name, image, company, description, tags, priority = false }: ProjectProps) {
   return (
     <article className="flex flex-col md:flex-row gap-20 items-center">
       <div
@@ -27,8 +27,8 @@ function Project({ order, name, image, company, description, tags }: ProjectProp
       >
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
-            <TextDisplay2 color={Color.level1}>{name}</TextDisplay2>
-            <TextBody color={Color.level1} as="span" className="text-wrap">{`@ ${company}`}</TextBody>
+            <TextDisplay2 color={"level1"}>{name}</TextDisplay2>
+            <TextBody color={"level1"} as="span" className="text-wrap">{`@ ${company}`}</TextBody>
           </div>
           <TextBody>{description}</TextBody>
         </div>
@@ -46,9 +46,9 @@ function Project({ order, name, image, company, description, tags }: ProjectProp
       >
         <Image
           src={image}
-          priority
+          priority={priority}
           alt={`Picture of ${name} Project`}
-          sizes="100%"
+          sizes="(max-width: 414px) 90vw, (max-width: 768px) 350px, 430px"
           fill
           style={{
             objectFit: "contain",

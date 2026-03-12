@@ -26,5 +26,11 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "packageManager": "yarn@4.6.0"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "unrs-resolver"
+    ]
+  },
+  "packageManager": "pnpm@10.7.0"
 }

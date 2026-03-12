@@ -3,7 +3,6 @@
 @theme {
   --breakpoint-sm: 414px;
 
-  --color-background: var(--background);
   --color-level1: #2f314c;
   --color-level2: #444659;
   --color-level3: #55576b;
@@ -30,18 +29,6 @@
 }
 
 @layer base {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #2F314C;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #2F314C;
-    }
-  }
-
   html {
     scroll-behavior: smooth;
     background: linear-gradient(
@@ -54,7 +41,7 @@
   }
 
   body {
-    color: var(--foreground);
+    color: var(--color-level1);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;

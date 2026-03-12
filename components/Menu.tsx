@@ -5,7 +5,6 @@ import Experience from "@/assets/menu/experience.svg";
 import Skills from "@/assets/menu/skills.svg";
 import Contact from "@/assets/menu/contact.svg";
 import Image from "next/image";
-import { Color } from "@/contants/colors";
 import TextLabel1 from "@/primitives/TextLabel1";
 
 const menuItems = [
@@ -38,20 +37,20 @@ const menuItems = [
 
 function Menu() {
   return (
-    <nav className="flex items-center py-2 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
+    <nav aria-label="Mobile navigation" className="flex items-center py-2 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
       {menuItems.map((item) => (
         <a
-          className="flex flex-1 items-center flex-col gap-2 text-level3 hover:text-level1"
+          className="flex flex-1 items-center flex-col gap-2 text-level3 hover:opacity-60"
           key={item.name}
           href={item.href}
         >
           <Image
             src={item.icon}
-            alt={`Icon for of ${item.name} section`}
+            alt={`Icon for ${item.name} section`}
             width={24}
             height={24}
           />
-          <TextLabel1 color={Color.inherit}>{item.name}</TextLabel1>
+          <TextLabel1 color={"inherit"}>{item.name}</TextLabel1>
         </a>
       ))}
     </nav>
