@@ -12,7 +12,7 @@ function Footer() {
         alt="Copyright"
         width={24}
         height={24}
-        className="rounded-full"
+        className="rounded-full dark:invert"
       />
       <TextBody>Eduardo Kegler {currentDate}</TextBody>
     </footer>

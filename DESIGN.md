@@ -9,29 +9,34 @@ Every UI change **must** follow these tokens. No ad-hoc values.
 
 Defined in `app/globals.css` via Tailwind `@theme`. Used through Tailwind utilities (`text-level1`, `bg-level5`, `border-level2`, etc.) and the `TextColor` type in `constants/colors.ts`.
 
-| Token | Hex | Tailwind Class | Usage |
-|-------|-----|----------------|-------|
-| `level1` | `#2f314c` | `text-level1`, `border-level1` | Primary text, headings, borders, buttons |
-| `level2` | `#444659` | `text-level2`, `border-level2` | Body text (default), secondary borders |
-| `level3` | `#55576b` | `text-level3` | Tertiary text, menu items base color |
-| `level4` | `#8b8ba7` | `text-level4` | Muted text, section subtitles, date labels |
-| `level5` | `#e2e2e9` | `bg-level5`, `border-level5` | Backgrounds (tags), dividers, light borders |
-| `white` | `#ffffff` | `bg-white` | Mobile nav background, skip-nav focus text |
+Colors are defined as CSS custom properties that swap based on `.dark` class. The Tailwind `@theme` layer references these variables, so all utilities (`text-level1`, `bg-level5`, etc.) auto-adapt.
+
+| Token | Light | Dark | Tailwind Class | Usage |
+|-------|-------|------|----------------|-------|
+| `level1` | `#2f314c` | `#c8cade` | `text-level1`, `border-level1` | Primary text, headings, borders, buttons |
+| `level2` | `#444659` | `#a8aac0` | `text-level2`, `border-level2` | Body text (default), secondary borders |
+| `level3` | `#55576b` | `#8888a0` | `text-level3` | Tertiary text, menu items base color |
+| `level4` | `#8b8ba7` | `#6b6b88` | `text-level4` | Muted text, section subtitles, date labels |
+| `level5` | `#e2e2e9` | `#2a2d42` | `bg-level5`, `border-level5` | Backgrounds (tags), dividers, light borders |
+| `surface` | `#ffffff` | `#12141e` | `bg-surface`, `text-surface` | Opaque backgrounds (mobile nav), contrast text |
+
+The dark palette **inverts the luminance hierarchy** while keeping the same blue-gray hue.
 
 ### Background
 
 ```css
-background: linear-gradient(
+background-color: var(--surface);
+background-image: linear-gradient(
   133.07deg,
-  rgba(255, 180, 176, 0.1) 0%,
-  rgba(255, 221, 201, 0.1) 34.41%,
+  rgba(255, 180, 176, var(--gradient-opacity)) 0%,
+  rgba(255, 221, 201, var(--gradient-opacity)) 34.41%,
   rgba(207, 255, 223, 0) 44.95%,
-  rgba(189, 238, 254, 0.1) 54.15%,
-  rgba(191, 185, 255, 0.1) 63.12%
+  rgba(189, 238, 254, var(--gradient-opacity)) 54.15%,
+  rgba(191, 185, 255, var(--gradient-opacity)) 63.12%
 );
 ```
 
-Light-only. No dark mode.
+`--gradient-opacity`: `0.1` (light), `0.04` (dark) — keeps the pastel gradient subtle in both modes.
 
 ---
 
@@ -212,6 +217,16 @@ Global config: `<MotionConfig reducedMotion="user">` — respects OS preference.
 
 Viewport trigger: `once: true`, `amount: 0.2` (projects).
 
+### Theme Toggle (ThemeToggle)
+
+SVG sun/moon morph icon (24x24) with 40x40 touch target (`p-2`).
+
+- **Animation:** Spring physics `{ stiffness: 200, damping: 30 }` — fluid, not bouncy
+- **Sun → Moon:** Central circle expands, mask circle creates crescent, rays fade out, SVG rotates 45deg
+- **Hover:** `hover:opacity-60` (standard convention)
+- **a11y:** Dynamic `aria-label` ("Switch to dark/light mode"), respects `prefers-reduced-motion`
+- **Placement:** Last element in Header, after nav. Visible on all breakpoints.
+
 ### Scroll
 
 `scroll-behavior: smooth` on `html`.
@@ -220,7 +235,7 @@ Viewport trigger: `once: true`, `amount: 0.2` (projects).
 
 ## Accessibility
 
-- **Skip navigation:** Visually hidden link, visible on focus. `sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-level1 focus:text-white focus:rounded-md`
+- **Skip navigation:** Visually hidden link, visible on focus. `sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-level1 focus:text-surface focus:rounded-md`
 - **Reduced motion:** Handled globally via `MotionConfig`.
 - **Nav labels:** Desktop nav: `aria-label="Main navigation"`, Mobile nav: `aria-label="Mobile navigation"`.
 - **External links:** All have `aria-label` describing the destination.
@@ -247,15 +262,18 @@ primitives/          — Text components, Tag, Divider (design tokens)
 constants/
   colors.ts          — TextColor type (single source for TS)
 
+components/
+  ThemeToggle.tsx   — Dark/light mode toggle with SVG morph animation
+
 app/
-  globals.css        — @theme (colors, breakpoints), base resets, gradient
+  globals.css        — @theme (colors, breakpoints), base resets, gradient, dark mode
 ```
 
 ---
 
 ## Rules
 
-1. **Colors** — Only use `level1` through `level5` and `white`. No arbitrary hex values.
+1. **Colors** — Only use `level1` through `level5` and `surface`. No arbitrary hex values. Never use `bg-white` — use `bg-surface` for opaque backgrounds.
 2. **Typography** — Only use the primitives above. No raw `text-*` classes for content.
 3. **Spacing** — Section horizontal padding is always `px-4 lg:px-20`. Use existing gap patterns.
 4. **Hover** — Always `hover:opacity-60`. No other hover patterns.

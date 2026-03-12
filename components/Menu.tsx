@@ -37,7 +37,7 @@ const menuItems = [
 
 function Menu() {
   return (
-    <nav aria-label="Mobile navigation" className="flex items-center py-2 border border-t-level5 border-solid fixed bottom-0 w-full bg-white lg:hidden">
+    <nav aria-label="Mobile navigation" className="flex items-center py-2 border border-t-level5 border-solid fixed bottom-0 w-full bg-surface lg:hidden">
       {menuItems.map((item) => (
         <a
           className="flex flex-1 items-center flex-col gap-2 text-level3 hover:opacity-60"
@@ -49,6 +49,7 @@ function Menu() {
             alt={`Icon for ${item.name} section`}
             width={24}
             height={24}
+            className="dark:brightness-[1.75]"
           />
           <TextLabel1 color={"inherit"}>{item.name}</TextLabel1>
         </a>

@@ -16,6 +16,7 @@ const colorClasses: Record<TextColor, string> = {
   level3: "text-level3",
   level4: "text-level4",
   level5: "text-level5",
+  surface: "text-surface",
   inherit: "text-inherit",
 };
 

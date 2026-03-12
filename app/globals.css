@@ -1,13 +1,16 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --breakpoint-sm: 414px;
 
-  --color-level1: #2f314c;
-  --color-level2: #444659;
-  --color-level3: #55576b;
-  --color-level4: #8b8ba7;
-  --color-level5: #e2e2e9;
+  --color-level1: var(--level1);
+  --color-level2: var(--level2);
+  --color-level3: var(--level3);
+  --color-level4: var(--level4);
+  --color-level5: var(--level5);
+  --color-surface: var(--surface);
 }
 
 /*
@@ -18,6 +21,26 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+:root {
+  --level1: #2f314c;
+  --level2: #444659;
+  --level3: #55576b;
+  --level4: #8b8ba7;
+  --level5: #e2e2e9;
+  --surface: #ffffff;
+  --gradient-opacity: 0.1;
+}
+
+.dark {
+  --level1: #c8cade;
+  --level2: #a8aac0;
+  --level3: #8888a0;
+  --level4: #6b6b88;
+  --level5: #2a2d42;
+  --surface: #12141e;
+  --gradient-opacity: 0.04;
+}
+
 @layer base {
   *,
   ::after,
@@ -30,14 +53,23 @@
 
 @layer base {
   html {
+    transition: background-color 0.2s ease;
+  }
+
+  body, span, p, h1, h2, h3, h4, h5, h6, a, button, nav, header, footer, div, article {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  html {
     scroll-behavior: smooth;
-    background: linear-gradient(
+    background-color: var(--surface);
+    background-image: linear-gradient(
       133.07deg,
-      rgba(255, 180, 176, 0.1) 0%,
-      rgba(255, 221, 201, 0.1) 34.41%,
+      rgba(255, 180, 176, var(--gradient-opacity)) 0%,
+      rgba(255, 221, 201, var(--gradient-opacity)) 34.41%,
       rgba(207, 255, 223, 0) 44.95%,
-      rgba(189, 238, 254, 0.1) 54.15%,
-      rgba(191, 185, 255, 0.1) 63.12%);
+      rgba(189, 238, 254, var(--gradient-opacity)) 54.15%,
+      rgba(191, 185, 255, var(--gradient-opacity)) 63.12%);
   }
 
   body {

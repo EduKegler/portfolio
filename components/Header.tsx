@@ -1,5 +1,6 @@
 import Divider from "@/primitives/Divider";
 import TextLabel1 from "@/primitives/TextLabel1";
+import ThemeToggle from "@/components/ThemeToggle";
 import { memo } from "react";
 
 function Header() {
@@ -12,20 +13,23 @@ function Header() {
         Senior Software Engineer
       </TextLabel1>
       <Divider />
-      <nav aria-label="Main navigation" className="hidden lg:flex gap-6">
-        <a href="#projects" className="hover:opacity-60">
-          <TextLabel1>Projects</TextLabel1>
-        </a>
-        <a href="#experience" className="hover:opacity-60">
-          <TextLabel1>Experience</TextLabel1>
-        </a>
-        <a href="#skills" className="hover:opacity-60">
-          <TextLabel1>Skills</TextLabel1>
-        </a>
-        <a href="#contact" className="hover:opacity-60">
-          <TextLabel1>Contact</TextLabel1>
-        </a>
-      </nav>
+      <div className="flex items-center gap-2 lg:gap-6 shrink-0">
+        <nav aria-label="Main navigation" className="hidden lg:flex gap-6">
+          <a href="#projects" className="hover:opacity-60">
+            <TextLabel1>Projects</TextLabel1>
+          </a>
+          <a href="#experience" className="hover:opacity-60">
+            <TextLabel1>Experience</TextLabel1>
+          </a>
+          <a href="#skills" className="hover:opacity-60">
+            <TextLabel1>Skills</TextLabel1>
+          </a>
+          <a href="#contact" className="hover:opacity-60">
+            <TextLabel1>Contact</TextLabel1>
+          </a>
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   );
 }
