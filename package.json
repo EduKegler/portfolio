@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:cv": "next build && tsx scripts/build-cv.ts",
+    "check:cv": "tsx scripts/check-cv.ts",
+    "verify:cv": "tsx scripts/verify-cv.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -21,14 +24,21 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9",
     "eslint-config-next": "^16",
+    "get-port": "^7.2.0",
+    "pdf-parse": "^2.4.5",
     "postcss": "^8",
+    "puppeteer": "^24.42.0",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "esbuild",
+      "puppeteer",
       "sharp",
       "unrs-resolver"
     ]

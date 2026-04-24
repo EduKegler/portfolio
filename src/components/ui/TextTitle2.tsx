@@ -1,0 +1,21 @@
+import { HTMLAttributes } from "react";
+import TextBase, { TextBaseProps } from "./TextBase";
+import clsx from "clsx";
+
+type TextTitle2Props = TextBaseProps & HTMLAttributes<HTMLSpanElement>;
+
+export default function TextTitle2({ children, ...props }: TextTitle2Props) {
+  return (
+    <TextBase
+      as="h3"
+      {...props}
+      className={clsx(
+        "text-[24px] leading-[32px]",
+        "lg:text-[32px] lg:leading-[38px]",
+        props.className
+      )}
+    >
+      {children}
+    </TextBase>
+  );
+}
