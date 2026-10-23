@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "build:cv": "next build && tsx scripts/build-cv.ts",
     "check:cv": "tsx scripts/check-cv.ts",
-    "verify:cv": "tsx scripts/verify-cv.ts"
+    "verify:cv": "tsx scripts/verify-cv.ts",
+    "test": "vitest run",
+    "match:jd": "tsx scripts/match-jd.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -33,7 +35,8 @@
     "puppeteer": "^24.42.0",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

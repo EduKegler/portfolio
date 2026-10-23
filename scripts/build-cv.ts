@@ -1,8 +1,13 @@
 import { spawn, type ChildProcess } from "node:child_process";
 import { writeFile } from "node:fs/promises";
 import getPort from "get-port";
-import puppeteer from "puppeteer";
-import { computeResumeHash, HASH_PATH, PDF_PATH, PROJECT_ROOT } from "./lib/paths";
+import puppeteer, { type Browser } from "puppeteer";
+import {
+  computeVariantHash,
+  PROJECT_ROOT,
+  VARIANT_PATHS,
+  type ResumeVariantPaths,
+} from "./lib/paths";
 
 const SERVER_READY_TIMEOUT_MS = 30_000;
 const SERVER_POLL_INTERVAL_MS = 500;
@@ -41,6 +46,34 @@ async function killServer(server: ChildProcess): Promise<void> {
   });
 }
 
+async function renderVariant(
+  browser: Browser,
+  baseUrl: string,
+  variantPaths: ResumeVariantPaths,
+): Promise<void> {
+  const { variant, pdfPath, hashPath } = variantPaths;
+  const page = await browser.newPage();
+  try {
+    await page.goto(`${baseUrl}${variant.route}`, {
+      waitUntil: "networkidle0",
+    });
+    await page.emulateMediaType("print");
+    await page.pdf({
+      path: pdfPath,
+      printBackground: true,
+      // Page size AND margins come from CSS @page so that per-page top
+      // padding is honoured (a .root padding only applies to the first page).
+      // When preferCSSPageSize is true, format/margin options are ignored.
+      preferCSSPageSize: true,
+    });
+    console.log(`[build-cv] [${variant.slug}] PDF written to ${pdfPath}`);
+  } finally {
+    await page.close();
+  }
+  await writeFile(hashPath, `${computeVariantHash(variant)}\n`, "utf8");
+  console.log(`[build-cv] [${variant.slug}] Hash written to ${hashPath}`);
+}
+
 async function main(): Promise<void> {
   const port = await getPort();
   const baseUrl = `http://127.0.0.1:${port}`;
@@ -68,24 +101,14 @@ async function main(): Promise<void> {
 
     const browser = await puppeteer.launch({ headless: true });
     try {
-      const page = await browser.newPage();
-      await page.goto(`${baseUrl}/resume`, { waitUntil: "networkidle0" });
-      await page.emulateMediaType("print");
-      await page.pdf({
-        path: PDF_PATH,
-        printBackground: true,
-        // Page size AND margins come from CSS @page so that per-page top
-        // padding is honoured (a .root padding only applies to the first page).
-        // When preferCSSPageSize is true, format/margin options are ignored.
-        preferCSSPageSize: true,
-      });
-      console.log(`[build-cv] PDF written to ${PDF_PATH}`);
+      await Promise.all(
+        VARIANT_PATHS.map((variantPaths) =>
+          renderVariant(browser, baseUrl, variantPaths),
+        ),
+      );
     } finally {
       await browser.close();
     }
-
-    await writeFile(HASH_PATH, `${computeResumeHash()}\n`, "utf8");
-    console.log(`[build-cv] Hash written to ${HASH_PATH}`);
   } finally {
     await killServer(server);
     console.log("[build-cv] Server stopped.");

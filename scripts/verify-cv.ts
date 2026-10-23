@@ -1,11 +1,15 @@
 import { readFile } from "node:fs/promises";
 import { PDFParse } from "pdf-parse";
-import { resumeData } from "../src/features/resume/data/resume-data";
-import { PDF_PATH } from "./lib/paths";
+import type { ResumeData } from "../src/features/resume/data/types";
+import { VARIANT_PATHS } from "./lib/paths";
 
 type Check = {
   name: string;
-  run: (text: string, numpages: number) => string | null;
+  run: (
+    text: string,
+    numpages: number,
+    data: ResumeData,
+  ) => string | null;
 };
 
 const SECTION_TITLES = [
@@ -49,9 +53,9 @@ const checks: Check[] = [
   },
   {
     name: "All bullets preserved",
-    run: (text) => {
+    run: (text, _numpages, data) => {
       const normalizedText = text.replace(/\s+/g, " ");
-      const allBullets = resumeData.jobs.flatMap((job) => job.bullets ?? []);
+      const allBullets = data.jobs.flatMap((job) => job.bullets ?? []);
       const missing = allBullets
         .map((bullet) => bullet.slice(0, 40).replace(/\s+/g, " "))
         .filter((snippet) => !normalizedText.includes(snippet));
@@ -63,14 +67,14 @@ const checks: Check[] = [
   },
   {
     name: "Contact details (email, phone, portfolio) present as text",
-    run: (text) => {
+    run: (text, _numpages, data) => {
       const normalized = text.replace(/\s+/g, " ");
       const expected = [
-        resumeData.contact.email,
-        resumeData.contact.phone.replace(/\s+/g, " "),
-        resumeData.contact.portfolio.label,
-        resumeData.contact.linkedin.label,
-        resumeData.contact.github.label,
+        data.contact.email,
+        data.contact.phone.replace(/\s+/g, " "),
+        data.contact.portfolio.label,
+        data.contact.linkedin.label,
+        data.contact.github.label,
       ];
       const missing = expected.filter((value) => !normalized.includes(value));
       if (missing.length > 0) {
@@ -81,9 +85,9 @@ const checks: Check[] = [
   },
   {
     name: "Every company name present",
-    run: (text) => {
+    run: (text, _numpages, data) => {
       const normalized = text.replace(/\s+/g, " ");
-      const missing = resumeData.jobs
+      const missing = data.jobs
         .map((job) => job.company)
         .filter((company) => !normalized.includes(company));
       if (missing.length > 0) {
@@ -94,8 +98,12 @@ const checks: Check[] = [
   },
 ];
 
-async function main(): Promise<void> {
-  const buffer = await readFile(PDF_PATH);
+async function verifyVariant(
+  pdfPath: string,
+  data: ResumeData,
+  slug: string,
+): Promise<number> {
+  const buffer = await readFile(pdfPath);
   const parser = new PDFParse({ data: new Uint8Array(buffer) });
   let textResult;
   try {
@@ -106,26 +114,38 @@ async function main(): Promise<void> {
 
   const results = checks.map((check) => ({
     name: check.name,
-    error: check.run(textResult.text, textResult.total),
+    error: check.run(textResult.text, textResult.total, data),
   }));
 
   let failed = 0;
   for (const result of results) {
     if (result.error === null) {
-      console.log(`[verify-cv] PASS  ${result.name}`);
+      console.log(`[verify-cv] [${slug}] PASS  ${result.name}`);
     } else {
-      console.error(`[verify-cv] FAIL  ${result.name}`);
+      console.error(`[verify-cv] [${slug}] FAIL  ${result.name}`);
       console.error(`  ${result.error}`);
       failed += 1;
     }
   }
 
-  if (failed > 0) {
-    console.error(`\n[verify-cv] ${failed} check(s) failed.`);
+  return failed;
+}
+
+async function main(): Promise<void> {
+  let totalFailed = 0;
+  let totalChecks = 0;
+  for (const { variant, pdfPath } of VARIANT_PATHS) {
+    const failed = await verifyVariant(pdfPath, variant.data, variant.slug);
+    totalFailed += failed;
+    totalChecks += checks.length;
+  }
+
+  if (totalFailed > 0) {
+    console.error(`\n[verify-cv] ${totalFailed} check(s) failed.`);
     process.exit(1);
   }
 
-  console.log(`\n[verify-cv] All ${results.length} checks passed.`);
+  console.log(`\n[verify-cv] All ${totalChecks} checks passed.`);
 }
 
 main().catch((error) => {

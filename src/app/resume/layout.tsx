@@ -3,22 +3,15 @@ import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Eduardo Kegler | Resume",
-  description:
-    "Senior Frontend Engineer specializing in authentication, onboarding, and real-time trading interfaces. React, TypeScript, Next.js, GraphQL.",
-  alternates: {
-    canonical: "/resume",
-  },
   robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "Eduardo Kegler | Resume",
-    description:
-      "Senior Frontend Engineer specializing in authentication, onboarding, and real-time trading interfaces.",
-    url: "https://kegler.dev/resume",
-    siteName: "Eduardo Kegler Portfolio",
-    type: "profile",
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
   },
 };
 

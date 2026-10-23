@@ -123,8 +123,12 @@ When unsure, prefer `features/<feat>/` — promoting later is cheaper than demot
 
 ## CV Build Pipeline (feature: resume)
 
-- `/resume` route renders from `src/features/resume/data/resume-data.ts`.
-- `pnpm build:cv` → builds Next, spawns server, renders PDF via Puppeteer.
-- `pnpm verify:cv` → 5 structural checks against `public/cv.pdf`.
-- `pnpm check:cv` → guards that `public/cv.pdf` matches current `resume-data.ts` (via `public/cv.hash`).
-- Any change to `resume-data.ts` must be followed by `pnpm build:cv` before commit.
+- `/resume` route renders the base CV from `src/features/resume/data/resume-data.ts`.
+- Tailored variants live in `src/features/resume/data/variants/<slug>.ts` as `ResumeOverrides` (title, summary, per-company role/stack/bullets, skill group items). Register them in `variants.ts`. `applyOverrides` throws on unknown company or skill group. Companies and periods always come from the base, so the timeline never drifts.
+- `/resume/[variant]` renders each tailored variant; PDF is `public/cv-<slug>.pdf`.
+- `pnpm build:cv` → builds Next, spawns server, renders one PDF per variant via Puppeteer.
+- `pnpm verify:cv` → 5 structural checks against every variant PDF.
+- `pnpm check:cv` → guards that each PDF matches current data (via `public/*.hash`).
+- `pnpm match:jd <slug> <job-file>` → keyword coverage of a job description against the variant PDF. Lists what is missing but exists in the base, and what is missing everywhere. Dictionary in `scripts/lib/keywords.ts`.
+- `pnpm test` → Vitest.
+- Any change to resume data or a variant must be followed by `pnpm build:cv` before commit.

@@ -34,6 +34,18 @@ export type ResumeEducation = {
   location: string;
 };
 
+export type ResumeJobOverride = Partial<
+  Pick<ResumeJob, "role" | "stack" | "bullets">
+>;
+
+// Variant = only what changes. Companies and periods always come from the base.
+export type ResumeOverrides = {
+  title?: string;
+  summary?: string;
+  jobs?: Record<string, ResumeJobOverride>;
+  skills?: Record<string, string[]>;
+};
+
 export type ResumeData = {
   name: string;
   title: string;

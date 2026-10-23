@@ -1,10 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { PDFParse } from "pdf-parse";
 import { resumeData } from "../src/features/resume/data/resume-data";
-import { PDF_PATH } from "./lib/paths";
+import { DEFAULT_VARIANT_PATHS } from "./lib/paths";
 
 const OLD_PDF = "/tmp/cv-old.pdf";
-const NEW_PDF = PDF_PATH;
+const NEW_PDF = DEFAULT_VARIANT_PATHS.pdfPath;
 
 type ParsedPdf = {
   label: string;
@@ -132,14 +132,13 @@ const checks: Check[] = [
     name: "Every company name extractable",
     run: (pdf) => {
       const norm = pdf.text.replace(/\s+/g, " ");
-      const missing = resumeData.jobs
-        .map((j) => j.company)
-        .filter((c) => !norm.includes(c));
+      const companies = resumeData.jobs.map((j) => j.company);
+      const missing = companies.filter((c) => !norm.includes(c));
       return {
         ok: missing.length === 0,
         detail:
           missing.length === 0
-            ? `4/4 companies found`
+            ? `${companies.length}/${companies.length} companies found`
             : `missing: ${missing.join(", ")}`,
       };
     },
