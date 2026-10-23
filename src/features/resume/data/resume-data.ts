@@ -21,8 +21,23 @@ export const resumeData: ResumeData = {
     },
   },
   summary:
-    "Senior Frontend Engineer (7+ years) specializing in authentication/onboarding and real-time trading interfaces. Shipped measurable outcomes at scale (+35% signup conversion, −20% auth flow load time at Coinbase) and led Web3 wallet-connected DeFi surfaces (AMM, CLOB, perps) with latency-sensitive UIs at Liquid Labs.",
+    "Senior Frontend Engineer (8 years) specializing in authentication/onboarding and real-time trading interfaces. Shipped measurable outcomes at scale (+35% signup conversion, −20% auth flow load time at Coinbase) and led Web3 wallet-connected DeFi surfaces (AMM, CLOB, perps) with latency-sensitive UIs at Liquid Labs.",
   jobs: [
+    {
+      company: "NG.cash",
+      companyDetail: "Brazilian fintech",
+      role: "Senior Software Engineer",
+      location: "Remote",
+      period: "05/2026 - Present",
+      stack: ["React Native", "TypeScript", "React", "Next.js", "Feature Flags", "PostHog", "Datadog", "AWS Lambda", "AWS CDK", "GitLab CI"],
+      bullets: [
+        "Delivered a new home navigation experience end to end in React Native, nearly solo, from RFC and design-system component to grid engine, skeleton loading, A/B experiment, feature flags, and observability, rolled out to 100% of adult users.",
+        "Ported a full web e-commerce product to the mobile app, covering purchase flow, logged-in area, OTP login with auth guard, signup, and identity verification.",
+        "Traced 3 of the top login errors to a single root cause in credential storage after password reset and shipped the fix; root-caused a biometric autologin failure by reading react-native-keychain internals.",
+        "Cut AWS Lambda provisioned concurrency from 151 to 22 instances after finding paid capacity no service used, with a CDK rollout that kept a fallback in place.",
+        "Removed ~40% of an onboarding web app's codebase and upgraded all dependencies, clearing open CVEs.",
+      ],
+    },
     {
       company: "Liquid Labs",
       companyDetail: "GTE / gte.xyz",
@@ -68,13 +83,19 @@ export const resumeData: ResumeData = {
       company: "Todobit",
       role: "Junior Software Engineer",
       location: "Brazil",
-      period: "08/2018 - 06/2019",
+      period: "12/2018 - 06/2019",
+    },
+    {
+      company: "UFSC Telemedicine Lab",
+      role: "Software Engineering Intern",
+      location: "Brazil",
+      period: "08/2018 - 12/2018",
     },
   ],
   skills: [
     {
       label: "Frontend",
-      items: ["React", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "Redux", "Zustand", "TanStack Query", "React Hook Form", "Zod", "Storybook", "Vite", "Webpack", "HTML", "CSS"],
+      items: ["React", "React Native", "TypeScript", "Next.js", "JavaScript", "Tailwind CSS", "Redux", "Zustand", "TanStack Query", "React Hook Form", "Zod", "Storybook", "Vite", "Webpack", "HTML", "CSS"],
     },
     {
       label: "API/Backend",
