@@ -46,7 +46,7 @@ export const resumeData: ResumeData = {
       period: "03/2025 - 02/2026",
       stack: ["React", "TypeScript", "Next.js", "Zustand", "TanStack Query", "Storybook", "React Hook Form", "Zod", "Viem", "Privy", "Vitest", "WebSockets", "Amplitude", "Monorepo", "pnpm"],
       bullets: [
-        "As the sole frontend engineer, built 5 core trading surfaces (AMM, CLOB, perpetuals, token launchpad, and portfolio tracking), delivering the platform frontend from zero to a public testnet used by 700k+ users in under a year.",
+        "As the sole frontend engineer, built 5 core trading surfaces (AMM, CLOB, perpetuals, token launchpad, and portfolio tracking), delivering the platform frontend from zero to a public testnet used by over 1 million users in under a year.",
         "Built and owned the internal design system with 20+ Storybook components, using Zustand for client state, TanStack Query for server cache, and React Hook Form + Zod for schema-validated forms.",
         "Implemented wallet connectivity and authentication using Privy and Viem, supporting wallet login, session handling, and transaction flows across the trading platform.",
         "Built real-time portfolio and trading UIs powered by WebSocket streams for balances, PnL, open positions, and order execution, improving large-dataset rendering and Core Web Vitals on live trading screens.",
@@ -76,7 +76,7 @@ export const resumeData: ResumeData = {
       bullets: [
         "Improved performance and user experience for 3,000 users by developing and maintaining a real estate platform using TypeScript, React, and GraphQL.",
         "Achieved UI consistency across 3 platforms by designing and building an internal design system with responsive design and cross-browser support, and supporting a redesign of the main website.",
-        "Increased operational efficiency by 30% by implementing an automated invoice generation system for transaction participants.",
+        "Implemented an automated invoice generation system for transaction participants, replacing a manual process for every transaction.",
       ],
     },
     {

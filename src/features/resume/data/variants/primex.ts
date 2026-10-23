@@ -9,7 +9,7 @@ export const primexOverrides: ResumeOverrides = {
     "Liquid Labs": {
       stack: ["React", "TypeScript", "Next.js", "Zustand", "TanStack Query", "Storybook", "React Hook Form", "Zod", "Viem", "Privy", "Vitest", "WebSockets", "REST", "Amplitude", "Monorepo", "pnpm"],
       bullets: [
-        "As the sole frontend engineer, built 5 core trading surfaces (AMM, CLOB, perpetuals, token launchpad, and portfolio tracking), delivering the platform frontend from zero to a public testnet used by 700k+ users in under a year.",
+        "As the sole frontend engineer, built 5 core trading surfaces (AMM, CLOB, perpetuals, token launchpad, and portfolio tracking), delivering the platform frontend from zero to a public testnet used by over 1 million users in under a year.",
         "Built and owned the internal design system with 20+ Storybook components, using Zustand for client state, TanStack Query for server cache, and React Hook Form + Zod for schema-validated forms.",
         "Implemented wallet connectivity and onchain state using Privy and Viem, supporting wallet login, session handling, multicall reads, and transaction flows from signing to settlement confirmation.",
         "Built real-time portfolio and trading UIs powered by WebSocket streams for balances, PnL, positions, and order execution, co-designing API contracts and data models with the backend team and defining normalization rules for high-frequency updates.",
