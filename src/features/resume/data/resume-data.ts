@@ -107,19 +107,19 @@ export const resumeData: ResumeData = {
     },
     {
       label: "Architecture",
-      items: ["Design Systems", "Responsive Design", "Accessibility (WCAG)", "Cross-browser Compatibility", "SSR/SSG", "Caching Strategies", "Internationalization (i18n)", "Feature Flags", "RFC Authoring"],
+      items: ["Design Systems", "Accessibility (WCAG)", "SSR/SSG", "Caching Strategies", "Internationalization (i18n)", "Feature Flags", "RFC Authoring"],
     },
     {
       label: "Quality & Observability",
-      items: ["Jest", "Vitest", "Cypress", "React Testing Library", "Automated Testing", "Code Review", "Interviewing/Hiring", "Core Web Vitals", "Datadog", "Amplitude", "Analytics & Telemetry"],
+      items: ["Jest", "Vitest", "Cypress", "React Testing Library", "Core Web Vitals", "Datadog", "Amplitude", "PostHog"],
     },
     {
       label: "Delivery",
-      items: ["CI/CD", "GitHub Actions", "Vercel", "Git", "Monorepo", "Turborepo", "pnpm", "Systems Design"],
+      items: ["CI/CD", "GitHub Actions", "GitLab CI", "Vercel", "Monorepo", "Turborepo", "pnpm"],
     },
     {
       label: "AI Tools",
-      items: ["Codex", "Claude Code", "Embeddings", "LLM Integration", "Prompt Engineering"],
+      items: ["Claude Code", "Codex", "Prompt Engineering", "MCP"],
     },
     {
       label: "Web3/Trading",

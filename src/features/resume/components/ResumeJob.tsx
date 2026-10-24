@@ -11,6 +11,22 @@ export default function ResumeJob({ job }: ResumeJobProps) {
     ? `${job.company} (${job.companyDetail})`
     : job.company;
 
+  const hasDetails = Boolean(job.stack?.length || job.bullets?.length);
+
+  // Early roles without details collapse to one line to save page space.
+  if (!hasDetails) {
+    return (
+      <article className={styles.jobCompact}>
+        <TextBase as="h3" color="inherit" className={styles.jobCompactCompany}>
+          {companyLabel}
+        </TextBase>
+        <TextBase as="span" color="inherit" className={styles.jobCompactMeta}>
+          {` | ${job.role} | ${job.period} | ${job.location}`}
+        </TextBase>
+      </article>
+    );
+  }
+
   return (
     <article className={styles.job}>
       <div className={styles.jobHeader}>

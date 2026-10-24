@@ -176,6 +176,21 @@
   font-weight: 700;
 }
 
+.jobCompact {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--color-level1);
+}
+
+.jobCompactCompany {
+  display: inline;
+  font-weight: 700;
+}
+
+.jobCompactMeta {
+  color: var(--color-level2);
+}
+
 .education {
   font-size: 15px;
   color: var(--color-level1);
@@ -244,7 +259,7 @@
 
   .root {
     color: #2f314c; /* level1 light */
-    padding: 18mm 18mm 16mm;
+    padding: 15mm 18mm 13mm;
     max-width: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10.5pt;
@@ -290,7 +305,7 @@
   }
 
   .section {
-    margin-top: 14pt;
+    margin-top: 11pt;
   }
 
   .sectionTight {
@@ -307,6 +322,7 @@
     padding-bottom: 2pt;
     border-bottom: 0.5pt solid #e2e2e9; /* level5 light */
     margin-bottom: 5pt;
+    break-after: avoid;
   }
 
   .sectionHeadingTight {
@@ -319,13 +335,16 @@
     line-height: 1.4;
   }
 
+  /* Jobs may split across pages; only the header stays with its first
+     bullet, so a long job doesn't push a half-empty page. */
   .job {
     margin-bottom: 8pt;
-    break-inside: avoid;
   }
 
   .jobHeader {
     margin-bottom: 2pt;
+    break-inside: avoid;
+    break-after: avoid;
   }
 
   .jobCompany {
@@ -387,6 +406,22 @@
 
   .skillLabel {
     font-weight: 700;
+  }
+
+  .jobCompact {
+    margin-bottom: 3pt;
+    font-size: 10.5pt;
+    color: #2f314c;
+    break-inside: avoid;
+  }
+
+  .jobCompactCompany {
+    font-size: 10.5pt;
+    font-weight: 700;
+  }
+
+  .jobCompactMeta {
+    color: #55576b;
   }
 
   .education {

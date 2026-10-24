@@ -38,12 +38,11 @@ export default function ResumeView({ variant }: ResumeViewProps) {
       <ResumeSection title="Skills">
         <ResumeSkills groups={data.skills} />
       </ResumeSection>
-      <ResumeSection title="Education">
+      <ResumeSection title="Education & Languages">
         <ResumeEducation items={data.education} />
-      </ResumeSection>
-      <ResumeSection title="Languages">
         <TextBase as="p" color="inherit" className={styles.languages}>
-          {data.languages}
+          <span className={styles.skillLabel}>Languages:</span>
+          {` ${data.languages}`}
         </TextBase>
       </ResumeSection>
     </main>

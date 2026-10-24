@@ -22,11 +22,9 @@ const SECTION_TITLES = [
 
 const checks: Check[] = [
   {
-    name: "PDF has 2-3 pages (ATS-friendly length)",
+    name: "PDF has at most 2 pages",
     run: (_text, numpages) =>
-      numpages >= 2 && numpages <= 3
-        ? null
-        : `expected 2-3 pages, got ${numpages}`,
+      numpages <= 2 ? null : `expected at most 2 pages, got ${numpages}`,
   },
   {
     name: "Sections appear in expected order",

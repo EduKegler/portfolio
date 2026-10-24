@@ -11,14 +11,12 @@ export default function ResumeEducation({ items }: ResumeEducationProps) {
     <div>
       {items.map((item) => (
         <div key={`${item.school}-${item.period}`} className={styles.education}>
-          <TextBase as="p" color="inherit" className={styles.educationSchool}>
-            {item.school}
-          </TextBase>
           <TextBase as="p" color="inherit">
-            {item.degree}
-          </TextBase>
-          <TextBase as="p" color="inherit" className={styles.educationMeta}>
-            {`${item.period} | ${item.location}`}
+            <span className={styles.educationSchool}>{item.school}</span>
+            {` | ${item.degree} | `}
+            <span className={styles.educationMeta}>
+              {`${item.period} | ${item.location}`}
+            </span>
           </TextBase>
         </div>
       ))}

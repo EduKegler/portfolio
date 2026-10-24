@@ -2,6 +2,7 @@ import { applyOverrides } from "@/features/resume/lib/apply-overrides";
 import { resumeData } from "./resume-data";
 import type { ResumeData, ResumeOverrides } from "./types";
 import { primexOverrides } from "./variants/primex";
+import { web3Overrides } from "./variants/web3";
 
 export type ResumeVariant = {
   slug: string;
@@ -32,6 +33,7 @@ export const resumeDefaultVariant: ResumeVariant = {
 // New variant: add an overrides file in ./variants and register it here.
 export const TAILORED_VARIANTS: ResumeVariant[] = [
   defineVariant("primex", primexOverrides),
+  defineVariant("web3", web3Overrides),
 ];
 
 export const RESUME_VARIANTS: ResumeVariant[] = [
