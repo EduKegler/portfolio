@@ -21,7 +21,7 @@ export const resumeData: ResumeData = {
     },
   },
   summary:
-    "Senior Frontend Engineer (8 years) specializing in authentication/onboarding and real-time trading interfaces. Shipped measurable outcomes at scale (+35% signup conversion, −20% auth flow load time at Coinbase) and led Web3 wallet-connected DeFi surfaces (AMM, CLOB, perps) with latency-sensitive UIs at Liquid Labs.",
+    "Senior Frontend Engineer (8 years) specializing in authentication/onboarding and real-time trading interfaces. At Coinbase, raised sign-up conversion by 35% and cut auth flow load time by 20%. At Liquid Labs, built wallet-connected DeFi surfaces (AMM, CLOB, perps) with latency-sensitive UIs as the sole frontend engineer.",
   jobs: [
     {
       company: "NG.cash",
@@ -64,7 +64,7 @@ export const resumeData: ResumeData = {
         "Shipped the App Switcher across Coinbase Help Center, Tracer, and Commerce with i18n and Amplitude analytics, increasing cross-product engagement among retail web users by 0.45%.",
         "Led Unified Signup 2.0, A/B-testing sign-in and sign-up flows for Apple and Google behind feature flags, resulting in a 35% increase in sign-up conversion rate.",
         "Optimized Core Web Vitals in key authentication flows, reducing load times by 20% through targeted rendering and caching improvements.",
-        "Drove quality through code review and RFC authoring across a Turborepo monorepo, and contributed to hiring through frontend engineering interviews.",
+        "Reviewed code and wrote RFCs across a Turborepo monorepo, and interviewed frontend engineering candidates.",
       ],
     },
     {
@@ -74,7 +74,7 @@ export const resumeData: ResumeData = {
       period: "06/2019 - 08/2021",
       stack: ["React", "TypeScript", "GraphQL", "JavaScript", "Storybook"],
       bullets: [
-        "Improved performance and user experience for 3,000 users by developing and maintaining a real estate platform using TypeScript, React, and GraphQL.",
+        "Developed and maintained a real estate platform used by 3,000 users, built with React, TypeScript, and GraphQL.",
         "Achieved UI consistency across 3 platforms by designing and building an internal design system with responsive design and cross-browser support, and supporting a redesign of the main website.",
         "Implemented an automated invoice generation system for transaction participants, replacing a manual process for every transaction.",
       ],
