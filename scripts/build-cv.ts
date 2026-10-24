@@ -1,7 +1,7 @@
 import { spawn, type ChildProcess } from "node:child_process";
 import { writeFile } from "node:fs/promises";
 import getPort from "get-port";
-import puppeteer, { type Browser } from "puppeteer";
+import puppeteer, { type Browser } from "puppeteer-core";
 import {
   computeVariantHash,
   PROJECT_ROOT,
@@ -99,7 +99,13 @@ async function main(): Promise<void> {
     await waitForServer(baseUrl, SERVER_READY_TIMEOUT_MS);
     console.log(`[build-cv] Server ready at ${baseUrl}`);
 
-    const browser = await puppeteer.launch({ headless: true });
+    // Uses the locally installed Google Chrome; CHROME_PATH overrides it.
+    const executablePath = process.env.CHROME_PATH;
+    const browser = await puppeteer.launch(
+      executablePath
+        ? { headless: true, executablePath }
+        : { headless: true, channel: "chrome" },
+    );
     try {
       await Promise.all(
         VARIANT_PATHS.map((variantPaths) =>
