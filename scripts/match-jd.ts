@@ -2,14 +2,13 @@ import { readFile } from "node:fs/promises";
 import { PDFParse } from "pdf-parse";
 import { resumeData } from "../src/features/resume/data/resume-data";
 import type { ResumeData } from "../src/features/resume/data/types";
-import { findVariant } from "../src/features/resume/data/variants";
 import {
   compareKeywords,
   DEFAULT_KEYWORDS,
   findKeywords,
   mergeKeywords,
 } from "./lib/keywords";
-import { computeVariantHash, getVariantPaths } from "./lib/paths";
+import { computeVariantHash, findVariant, getVariantPaths } from "./lib/paths";
 
 // Usage: pnpm match:jd <variant-slug> <job-description-file>
 // Compares the keywords of a job description with the variant's PDF text.

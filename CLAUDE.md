@@ -124,11 +124,12 @@ When unsure, prefer `features/<feat>/` — promoting later is cheaper than demot
 ## CV Build Pipeline (feature: resume)
 
 - `/resume` route renders the base CV from `src/features/resume/data/resume-data.ts`.
-- Tailored variants live in `src/features/resume/data/variants/<slug>.ts` as `ResumeOverrides` (title, summary, per-company role/stack/bullets, skill group items). Register them in `variants.ts`. `applyOverrides` throws on unknown company or skill group. Companies and periods always come from the base, so the timeline never drifts.
-- `/resume/[variant]` renders each tailored variant; PDF is `public/cv-<slug>.pdf`.
+- Tailored variants name the companies being applied to, so they never live in this public repo. They are `<slug>.json` files (`ResumeOverrides`: title, summary, per-company role/stack/bullets, skill group items) in the folder that `CV_VARIANTS_DIR` points to, set in the gitignored `.env.local`. `parseOverrides` checks the JSON shape and `applyOverrides` throws on unknown company or skill group. Companies and periods always come from the base, so the timeline never drifts.
+- Without `CV_VARIANTS_DIR` (as on Vercel) there are no variants: `/resume/<slug>` is 404 and only the base CV ships.
+- `/resume/[variant]` renders each tailored variant locally. Its PDF and hash are written next to the JSON, outside this repo. The base PDF is `public/cv.pdf`.
 - `pnpm build:cv` → builds Next, spawns server, renders one PDF per variant via Puppeteer.
 - `pnpm verify:cv` → 5 structural checks against every variant PDF.
-- `pnpm check:cv` → guards that each PDF matches current data (via `public/*.hash`).
+- `pnpm check:cv` → guards that each PDF matches current data (via the `.hash` next to each PDF).
 - `pnpm match:jd <slug> <job-file>` → keyword coverage of a job description against the variant PDF. Lists what is missing but exists in the base, and what is missing everywhere. Dictionary in `scripts/lib/keywords.ts`.
 - `pnpm test` → Vitest.
-- Any change to resume data or a variant must be followed by `pnpm build:cv` before commit.
+- Any change to resume data must be followed by `pnpm build:cv` before commit. Never commit a variant JSON or PDF here.
