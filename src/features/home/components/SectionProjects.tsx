@@ -1,4 +1,3 @@
-"use client";
 import TextTitle1 from "@/components/ui/TextTitle1";
 import Project, { ProjectProps } from "./Project";
 import Divider from "@/components/ui/Divider";
@@ -7,7 +6,6 @@ import SignIn from "@/assets/projects/sign-in.png";
 import SignUp from "@/assets/projects/sign-up.png";
 import GTE from "@/assets/projects/gte.png";
 import Fathom from "@/assets/projects/fathom.png";
-import { motion } from "motion/react";
 
 const projects: Omit<ProjectProps, "order">[] = [
   {
@@ -16,7 +14,15 @@ const projects: Omit<ProjectProps, "order">[] = [
     image: GTE,
     description: (
       <>
-        gte.xyz is a DeFi trading platform on MegaETH: portfolio tracker, AMM,
+        <a
+          href="https://gte.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:opacity-60"
+        >
+          gte.xyz
+        </a>{" "}
+        is a DeFi trading platform on MegaETH: portfolio tracker, AMM,
         token launchpad, central limit order book (CLOB) and perpetuals in one
         app.
         <br />
@@ -119,21 +125,10 @@ const projects: Omit<ProjectProps, "order">[] = [
 export default function SectionProjects() {
   return (
     <section className="px-4 lg:px-20 flex flex-col gap-10 lg:gap-20 overflow-hidden">
-      <TextTitle1>Projects</TextTitle1>
+      <TextTitle1 as="h2">Projects</TextTitle1>
       <div className="flex flex-col overflow-hidden">
         {projects.map((project, index) => (
-          <motion.div
-            initial={{
-              opacity: 0,
-              transform: `translateX(${index % 2 === 0 ? -200 : 200}px)`,
-            }}
-            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            style={{ willChange: "transform" }}
-            key={project.name}
-            className="flex flex-col"
-          >
+          <div key={project.name} className="flex flex-col">
             {index !== 0 && <Divider className="my-20" />}
             <Project
               name={project.name}
@@ -144,7 +139,7 @@ export default function SectionProjects() {
               order={index % 2 === 0 ? "left" : "right"}
               priority={index === 0}
             />
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

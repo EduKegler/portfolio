@@ -27,7 +27,7 @@ export default function Project({ order, name, image, company, description, tags
       >
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
-            <TextDisplay2 color={"level1"}>{name}</TextDisplay2>
+            <TextDisplay2 as="h3" color={"level1"}>{name}</TextDisplay2>
             <TextBody color={"level1"} as="span" className="text-wrap">{`@ ${company}`}</TextBody>
           </div>
           <TextBody>{description}</TextBody>

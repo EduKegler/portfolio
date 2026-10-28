@@ -1,5 +1,6 @@
 import TextDisplay1 from "@/components/ui/TextDisplay1";
 import TextTitle2 from "@/components/ui/TextTitle2";
+import TextBody from "@/components/ui/TextBody";
 import Image from "next/image";
 import ProfileImage from "@/assets/profile.jpg";
 import Divider from "@/components/ui/Divider";
@@ -30,10 +31,15 @@ export default function Content() {
             <TextDisplay1 color="level1">Eduardo Kegler</TextDisplay1>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
-            <TextTitle2 as="p">
-              Senior Frontend Engineer building trading surfaces, auth flows
-              and frontend systems for crypto and fintech products.
-            </TextTitle2>
+            <div className="flex flex-col gap-4">
+              <TextTitle2 as="p">
+                Senior Frontend Engineer building trading surfaces, auth flows
+                and frontend systems for crypto and fintech products.
+              </TextTitle2>
+              <TextBody color="level3">
+                Open to remote contract work. Florianópolis, Brazil (UTC-3).
+              </TextBody>
+            </div>
             <ResumeLink />
           </div>
         </div>

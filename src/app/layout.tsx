@@ -24,14 +24,6 @@ export const metadata: Metadata = {
       "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
     url: "https://kegler.dev",
     siteName: "Eduardo Kegler Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Eduardo Kegler Portfolio Preview",
-      },
-    ],
     type: "website",
   },
   twitter: {
@@ -39,7 +31,6 @@ export const metadata: Metadata = {
     title: "Eduardo Kegler | Portfolio",
     description:
       "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
-    images: ["/og-image.png"],
   },
 };
 
@@ -52,7 +43,7 @@ const jsonLd = {
       jobTitle: "Senior Frontend Engineer",
       url: "https://kegler.dev",
       email: "eduardokegler1@gmail.com",
-      image: "https://kegler.dev/og-image.png",
+      image: "https://kegler.dev/opengraph-image",
       sameAs: [
         "https://www.linkedin.com/in/eduardokegler/",
         "https://github.com/EduKegler",

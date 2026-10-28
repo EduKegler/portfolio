@@ -1,21 +1,13 @@
-"use client";
 import TextBody from "@/components/ui/TextBody";
 import TextTitle2 from "@/components/ui/TextTitle2";
 import TextTitle3 from "@/components/ui/TextTitle3";
 import ProfileImage from "@/assets/profile.jpg";
 import Image from "next/image";
 import TextDisplay2 from "@/components/ui/TextDisplay2";
-import { motion } from "motion/react";
 
 export default function SectionContact() {
   return (
-    <motion.section
-      className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full"
-      initial={{ opacity: 0, y: 100 }}
-      transition={{ duration: 1 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
+    <section className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full">
       <Image
         src={ProfileImage}
         alt="Picture of Eduardo"
@@ -89,6 +81,6 @@ export default function SectionContact() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
