@@ -23,7 +23,7 @@ kegler.dev is the public home of Eduardo Kegler's work and CV. It exists to conf
 
 Senior product engineer, frontend-leaning, who works on the backend when a feature needs it. 8 years of experience, the last 5 in crypto and fintech (Coinbase, Liquid Labs/GTE, NG.cash). The claim a neighbor cannot copy is ownership of whole products with measured outcomes: sole frontend engineer taking GTE from zero to a public testnet with over 1 million users, Unified Signup 2.0 at Coinbase with +35% sign-up conversion, and a nearly solo end-to-end delivery at NG.cash.
 
-Open decision: the site, base CV and LinkedIn headline still say "Senior Frontend Engineer". Moving them to the product engineer framing is a content change that must happen in `profile/HISTORY.md`-backed copy across all three, not on the site alone.
+The job title stays "Senior Frontend Engineer", identical on the site, base CV and LinkedIn. Matchers check that channels agree, and recruiters filter by that title. The product engineer framing lives in the supporting copy, not the title. Tailored CV variants may use "Senior Product Engineer" for roles posted under that name.
 
 ## Operating Context
 
