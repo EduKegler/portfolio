@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T22:31:54.443Z",
+  "title": "Design System: kegler.dev",
+  "extensions": {
+    "colorMeta": {
+      "level1": {
+        "role": "neutral",
+        "displayName": "Gallery Slate",
+        "dark": "#c8cade",
+        "tonalRamp": [
+          "oklch(15% 0.025 282)",
+          "oklch(26% 0.025 282)",
+          "oklch(37% 0.050 282)",
+          "oklch(48% 0.050 282)",
+          "oklch(60% 0.050 282)",
+          "oklch(72% 0.050 282)",
+          "oklch(84% 0.050 282)",
+          "oklch(95% 0.025 282)"
+        ]
+      },
+      "level2": {
+        "role": "neutral",
+        "displayName": "Label Slate",
+        "dark": "#a8aac0",
+        "tonalRamp": [
+          "oklch(15% 0.018 282)",
+          "oklch(26% 0.018 282)",
+          "oklch(37% 0.035 282)",
+          "oklch(48% 0.035 282)",
+          "oklch(60% 0.035 282)",
+          "oklch(72% 0.035 282)",
+          "oklch(84% 0.035 282)",
+          "oklch(95% 0.018 282)"
+        ]
+      },
+      "level3": {
+        "role": "neutral",
+        "displayName": "Caption Slate",
+        "dark": "#8888a0",
+        "tonalRamp": [
+          "oklch(15% 0.015 282)",
+          "oklch(26% 0.015 282)",
+          "oklch(37% 0.030 282)",
+          "oklch(48% 0.030 282)",
+          "oklch(60% 0.030 282)",
+          "oklch(72% 0.030 282)",
+          "oklch(84% 0.030 282)",
+          "oklch(95% 0.015 282)"
+        ]
+      },
+      "level5": {
+        "role": "neutral",
+        "displayName": "Mat Dark",
+        "dark": "#2a2d42",
+        "tonalRamp": [
+          "oklch(15% 0.010 282)",
+          "oklch(26% 0.010 282)",
+          "oklch(37% 0.020 282)",
+          "oklch(48% 0.020 282)",
+          "oklch(60% 0.020 282)",
+          "oklch(72% 0.020 282)",
+          "oklch(84% 0.020 282)",
+          "oklch(95% 0.010 282)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Wall White",
+        "dark": "#12141e",
+        "tonalRamp": [
+          "oklch(15% 0.005 280)",
+          "oklch(26% 0.005 280)",
+          "oklch(37% 0.010 280)",
+          "oklch(48% 0.010 280)",
+          "oklch(60% 0.010 280)",
+          "oklch(72% 0.010 280)",
+          "oklch(84% 0.010 280)",
+          "oklch(95% 0.005 280)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Cobalt Ink",
+        "dark": "#a9b8ff",
+        "tonalRamp": [
+          "oklch(15% 0.090 268)",
+          "oklch(26% 0.090 268)",
+          "oklch(37% 0.180 268)",
+          "oklch(48% 0.180 268)",
+          "oklch(60% 0.180 268)",
+          "oklch(72% 0.180 268)",
+          "oklch(84% 0.180 268)",
+          "oklch(95% 0.090 268)"
+        ]
+      },
+      "ink-contrast": {
+        "role": "primary",
+        "displayName": "Ink Contrast",
+        "dark": "#12141e",
+        "tonalRamp": [
+          "oklch(15% 0.005 280)",
+          "oklch(26% 0.005 280)",
+          "oklch(37% 0.010 280)",
+          "oklch(48% 0.010 280)",
+          "oklch(60% 0.010 280)",
+          "oklch(72% 0.010 280)",
+          "oklch(84% 0.010 280)",
+          "oklch(95% 0.005 280)"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection Haze",
+        "dark": "#2f3a7a",
+        "tonalRamp": [
+          "oklch(15% 0.030 270)",
+          "oklch(26% 0.030 270)",
+          "oklch(37% 0.060 270)",
+          "oklch(48% 0.060 270)",
+          "oklch(60% 0.060 270)",
+          "oklch(72% 0.060 270)",
+          "oklch(84% 0.060 270)",
+          "oklch(95% 0.030 270)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The wall text sentence only."
+      },
+      "address": {
+        "displayName": "Address",
+        "purpose": "The contact email address."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Work title at the top of a label."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "The one introductory paragraph, max 46ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Labels, nav, experience rows, links."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Stack line in labels, footer."
+      }
+    },
+    "wall": {
+      "value": "linear-gradient(133.07deg, rgba(255,180,176,var(--gradient-opacity)) 0%, rgba(255,221,201,var(--gradient-opacity)) 34.41%, rgba(207,255,223,0) 44.95%, rgba(189,238,254,var(--gradient-opacity)) 54.15%, rgba(191,185,255,var(--gradient-opacity)) 63.12%)",
+      "gradientOpacity": {
+        "light": 0.1,
+        "dark": 0.04
+      },
+      "purpose": "The gallery wall, on html over the surface color, in both themes."
+    },
+    "shadows": [
+      {
+        "name": "frame-cast-light",
+        "value": "0 18px 40px -18px rgba(47,49,76,0.45), 0 2px 6px -2px rgba(47,49,76,0.18)",
+        "purpose": "Framed screen on the light wall, with a 1px ring at level1 10%."
+      },
+      {
+        "name": "frame-cast-dark",
+        "value": "0 24px 60px -20px rgba(0,0,0,0.9), 0 18px 50px -24px rgba(150,160,220,0.18)",
+        "purpose": "Framed screen on the dark wall, with a 1px ring at white 15%."
+      }
+    ],
+    "motion": [
+      {
+        "name": "theme-fade",
+        "value": "0.2s ease",
+        "purpose": "Color, background and border transitions on theme change."
+      },
+      {
+        "name": "button-brighten",
+        "value": "filter 200ms, brightness(1.1) on hover",
+        "purpose": "Primary button hover."
+      },
+      {
+        "name": "toggle-spring",
+        "value": "spring stiffness 200 damping 30",
+        "purpose": "Sun to moon morph of the theme toggle."
+      },
+      {
+        "name": "scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "In-page nav to Work and Experience."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "414px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "page-max",
+        "value": "1280px"
+      }
+    ],
+    "scope": "Home (/) only. /resume and resume.module.css keep their own styling."
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "\"Email me\". The only filled button; cobalt pill.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Email me</a>",
+      "css": ".ds-btn-primary{display:inline-block;background:var(--ink,#2a44c2);color:var(--ink-contrast,#fff);border-radius:9999px;padding:10px 20px;font:600 15px/1.5 'Atkinson Hyperlegible Next',system-ui,sans-serif;text-decoration:none;transition:filter 200ms}.ds-btn-primary:hover{filter:brightness(1.1)}.ds-btn-primary:focus-visible{outline:2px solid var(--ink,#2a44c2);outline-offset:4px;border-radius:9999px}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Secondary actions: CV, LinkedIn, GitHub, Visit links.",
+      "html": "<a class=\"ds-link\" href=\"#\">Download CV (PDF)</a>",
+      "css": ".ds-link{color:var(--level2,#444659);font:400 15px/1.5 'Atkinson Hyperlegible Next',system-ui,sans-serif;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}.ds-link:hover{color:var(--level1,#2f314c)}.ds-link:focus-visible{outline:2px solid var(--ink,#2a44c2);outline-offset:4px;border-radius:4px}"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "refersTo": "text-link",
+      "description": "Name and title left, quiet nav right.",
+      "html": "<header class=\"ds-head\"><h1><b>Eduardo Kegler</b><span> · Senior Frontend Engineer</span></h1><nav><a href=\"#\">Work</a><a href=\"#\">Experience</a><a href=\"#\">CV</a><a href=\"#\">Email</a></nav></header>",
+      "css": ".ds-head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;font:400 15px/1.5 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--level1,#2f314c)}.ds-head h1{font:inherit;margin:0}.ds-head h1 b{font-weight:600}.ds-head h1 span{color:var(--level3,#55576b)}.ds-head nav{display:flex;gap:28px}.ds-head nav a{color:var(--level2,#444659);text-decoration:none}.ds-head nav a:hover{color:var(--level1,#2f314c)}.ds-head nav a:focus-visible{outline:2px solid var(--ink,#2a44c2);outline-offset:4px;border-radius:4px}"
+    },
+    {
+      "name": "Work Frame and Label",
+      "kind": "card",
+      "refersTo": "work-frame",
+      "description": "Signature: a screenshot in a square mat with a soft offset shadow, the museum label below.",
+      "html": "<figure class=\"ds-work\"><div class=\"ds-frame\"><div class=\"ds-screen\"></div></div><figcaption class=\"ds-label\"><h3>GTE</h3><p>Liquid Labs, 2025–2026</p><p class=\"ds-stack\">React, TypeScript, Next.js, Viem</p><p class=\"ds-note\">Sole frontend engineer. Built the AMM, order book and perpetuals from zero to a public testnet.</p><p class=\"ds-out\">1M+ testnet users</p></figcaption></figure>",
+      "css": ".ds-work{margin:0;max-width:520px;font-family:'Atkinson Hyperlegible Next',system-ui,sans-serif}.ds-frame{background:var(--surface,#fff);padding:12px;box-shadow:0 0 0 1px rgba(47,49,76,0.1),0 18px 40px -18px rgba(47,49,76,0.45),0 2px 6px -2px rgba(47,49,76,0.18)}.ds-screen{aspect-ratio:16/9;background:#14161f}.ds-label{margin-top:20px;max-width:36ch;font-size:15px;line-height:1.5;color:var(--level2,#444659)}.ds-label h3{margin:0;font-size:17px;font-weight:600;color:var(--level1,#2f314c)}.ds-label p{margin:0}.ds-stack{margin-top:4px!important;font-size:13px;color:var(--level3,#55576b)}.ds-note{margin-top:12px!important}.ds-out{margin-top:12px!important;font-weight:600;font-variant-numeric:tabular-nums;color:var(--level1,#2f314c)}"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "custom",
+      "refersTo": "experience-row",
+      "description": "Hairline-ruled list: tabular years column, company and role.",
+      "html": "<ol class=\"ds-exp\"><li><span class=\"ds-y\">2025–2026</span><span><b>Liquid Labs</b><span class=\"ds-r\">, Senior Frontend Engineer</span><span class=\"ds-h\">1M+ testnet users · 5 trading surfaces</span></span></li><li><span class=\"ds-y\">2021–2025</span><span><b>Coinbase</b><span class=\"ds-r\">, Software Engineer</span></span></li></ol>",
+      "css": ".ds-exp{list-style:none;margin:0;padding:0;border-top:1px solid rgba(47,49,76,0.15);font:400 15px/1.5 'Atkinson Hyperlegible Next',system-ui,sans-serif;color:var(--level1,#2f314c)}.ds-exp li{display:grid;grid-template-columns:6.5rem minmax(0,1fr);column-gap:24px;padding:16px 0;border-bottom:1px solid rgba(47,49,76,0.15)}.ds-y{font-variant-numeric:tabular-nums;color:var(--level3,#55576b)}.ds-exp b{font-weight:600}.ds-r{color:var(--level2,#444659)}.ds-h{display:block;font-variant-numeric:tabular-nums;color:var(--level3,#55576b)}"
+    },
+    {
+      "name": "Contact Address",
+      "kind": "custom",
+      "refersTo": "contact-address",
+      "description": "The email in the serif with a cobalt underline.",
+      "html": "<a class=\"ds-addr\" href=\"#\">name@example.com</a>",
+      "css": ".ds-addr{font:400 clamp(1.5rem,1rem + 1.6vw,2.25rem)/1.5 'Brygada 1918',Georgia,serif;color:var(--level1,#2f314c);text-decoration:underline;text-decoration-color:var(--ink,#2a44c2);text-decoration-thickness:1px;text-underline-offset:6px}.ds-addr:hover{color:var(--ink,#2a44c2)}.ds-addr:focus-visible{outline:2px solid var(--ink,#2a44c2);outline-offset:4px;border-radius:4px}"
+    },
+    {
+      "name": "Wall Text",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "The one serif sentence at display size.",
+      "html": "<p class=\"ds-wall\">I build the screens where people sign up, sign in and trade.</p>",
+      "css": ".ds-wall{margin:0;max-width:16ch;font:400 clamp(2rem,1.2rem + 2.4vw,3rem)/1.08 'Brygada 1918',Georgia,serif;letter-spacing:-0.02em;color:var(--level1,#2f314c);text-wrap:balance}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Exhibition Wall",
+    "overview": "The site is a small gallery of shipped products. A pinned pastel diagonal gradient is the wall, in both themes. Each product hangs on it as a screen inside a plain mat with a soft cast shadow, and under every screen sits the same museum label: title, company and years, stack, a one-line note, the measured outcome. Wall text, the one sentence that says what Eduardo builds, is set in a serif at display size; everything that informs is set in a highly legible sans.\n\nDensity is low and the pace is calm. Works hang with generous air between them, sections are separated by space and a single serif title, never by boxes or rules. Color is almost absent: a blue-gray neutral ladder carries all text, and one cobalt ink is held back for the act of reaching out.\n\nThe world rejects the developer-portfolio template: giant name hero, device mockups, alternating cards, tag clouds.\n\nScope: this world covers the home (`/`). The `/resume` route and its CSS module (`src/features/resume/**`, `resume.module.css`) keep their own print-oriented styling and are outside this file.",
+    "keyCharacteristics": [
+      "Pastel diagonal gradient wall, pinned behind everything, in light and dark.",
+      "Screens framed by a flat mat and a soft offset shadow, square corners.",
+      "One label anatomy for every work, everywhere.",
+      "Serif wall text, sans labels.",
+      "A single reserved ink (cobalt) for contact and focus."
+    ],
+    "rules": [
+      {
+        "name": "The Reserved Ink Rule",
+        "body": "Cobalt appears only where the visitor acts on contact (the primary action, the contact address) and on the focus ring. Never on headings, labels, numbers, nav or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ladder Rule",
+        "body": "Text hierarchy is carried by level1, level2 and level3 alone, never by new hues.",
+        "section": "colors"
+      },
+      {
+        "name": "The Wall Text Rule",
+        "body": "The serif is for things said to the visitor (the wall sentence, section titles, the address). Facts, labels and navigation stay in the sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Years and outcomes use tabular numerals so numbers align down a column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Space Not Lines Rule",
+        "body": "Sections are separated by space and a serif title. The only rules on the page are the hairlines of the experience list.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hung Frame Rule",
+        "body": "Only framed screens cast a shadow, and it is always soft and offset downward. No hard offset shadows, no glow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** give every shown work the full label anatomy, in the same order.",
+      "**Do** hang screenshots in the mat frame with the frame cast shadow for the current theme.",
+      "**Do** keep cobalt to the primary action, the contact address and the focus ring.",
+      "**Do** separate sections with space (112px mobile, 160px desktop) and a serif headline.",
+      "**Do** use tabular numerals for years and outcomes."
+    ],
+    "donts": [
+      "**Don't** show screens inside device mockups or rounded phone or browser chrome.",
+      "**Don't** add cards, alternating card rows, tag clouds or chip lists.",
+      "**Don't** add a giant name hero; the name lives in the header at body size.",
+      "**Don't** add a second filled button or a second accent color.",
+      "**Don't** put the serif on labels, nav or stack lines.",
+      "**Don't** round the frames or give any other element a shadow."
+    ]
+  }
+}
