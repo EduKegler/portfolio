@@ -24,6 +24,7 @@ export default function ResumeView({ variant }: ResumeViewProps) {
         name={data.name}
         title={data.title}
         contact={data.contact}
+        campaign={variant.slug}
       />
       <ResumeSection title="Professional Summary" tight>
         <TextBase as="p" color="inherit" className={styles.summary}>

@@ -7,13 +7,22 @@ type ResumeHeaderProps = {
   name: string;
   title: string;
   contact: ResumeContact;
+  campaign: string;
 };
 
-export default function ResumeHeader({ name, title, contact }: ResumeHeaderProps) {
+function withCvTracking(url: string, campaign: string): string {
+  const tracked = new URL(url);
+  tracked.searchParams.set("utm_source", "cv");
+  tracked.searchParams.set("utm_medium", "pdf");
+  tracked.searchParams.set("utm_campaign", campaign);
+  return tracked.toString();
+}
+
+export default function ResumeHeader({ name, title, contact, campaign }: ResumeHeaderProps) {
   const profiles = [
     { name: "LinkedIn", link: contact.linkedin },
     { name: "GitHub", link: contact.github },
-    { name: "Portfolio", link: contact.portfolio },
+    { name: "Portfolio", link: { ...contact.portfolio, url: withCvTracking(contact.portfolio.url, campaign) } },
   ];
 
   return (

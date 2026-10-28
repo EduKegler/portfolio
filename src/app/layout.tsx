@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
+const isProduction = process.env.VERCEL_ENV === "production";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -75,18 +77,26 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-MB2VZ76TZN"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-MB2VZ76TZN');
-        `}
-      </Script>
+      {isProduction && (
+        <>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-MB2VZ76TZN"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MB2VZ76TZN');
+              document.addEventListener('click', function (event) {
+                var link = event.target.closest && event.target.closest('a[href^="mailto:"]');
+                if (link) gtag('event', 'contact_click', { method: 'email', link_text: link.textContent.trim() });
+              });
+            `}
+          </Script>
+        </>
+      )}
       <body className="antialiased max-w-[1280px] mx-auto">
         <SkipNavigation />
         <Providers>{children}</Providers>
