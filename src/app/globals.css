@@ -11,6 +11,7 @@
   --color-level4: var(--level4);
   --color-level5: var(--level5);
   --color-surface: var(--surface);
+  --color-ink: var(--ink);
 }
 
 /*
@@ -28,6 +29,9 @@
   --level4: #8b8ba7;
   --level5: #e2e2e9;
   --surface: #ffffff;
+  --ink: #2a44c2;
+  --ink-contrast: #ffffff;
+  --selection: #d6ddff;
   --gradient-opacity: 0.1;
 }
 
@@ -38,6 +42,9 @@
   --level4: #6b6b88;
   --level5: #2a2d42;
   --surface: #12141e;
+  --ink: #a9b8ff;
+  --ink-contrast: #12141e;
+  --selection: #2f3a7a;
   --gradient-opacity: 0.04;
 }
 
@@ -70,6 +77,11 @@
       rgba(207, 255, 223, 0) 44.95%,
       rgba(189, 238, 254, var(--gradient-opacity)) 54.15%,
       rgba(191, 185, 255, var(--gradient-opacity)) 63.12%);
+  }
+
+  ::selection {
+    background-color: var(--selection);
+    color: var(--color-level1);
   }
 
   body {
