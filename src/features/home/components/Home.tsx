@@ -27,7 +27,7 @@ export default function Home() {
               I build the screens where people sign up, sign in and trade.
             </p>
             <p className="mt-6 max-w-[46ch] text-[17px] leading-[1.6] text-level2 text-pretty">
-              I'm a Senior Frontend Engineer with 8 years of experience, the last 5 in crypto and fintech at{" "}
+              I&apos;m a Senior Frontend Engineer with 8 years of experience, the last 5 in crypto and fintech at{" "}
               <span className="text-level1">Coinbase</span>, <span className="text-level1">Liquid Labs</span> and{" "}
               <span className="text-level1">NG.cash</span>. I own products end to end, from the RFC to the A/B test,
               and work on the backend when a feature needs it. I took the GTE frontend from zero to{" "}
