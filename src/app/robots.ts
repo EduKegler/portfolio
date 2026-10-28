@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/resume", "/resume/", "/cv.pdf", "/cv-*.pdf"],
+        disallow: ["/cv.pdf", "/cv-*.pdf"],
       },
     ],
     sitemap: "https://kegler.dev/sitemap.xml",

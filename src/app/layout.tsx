@@ -6,7 +6,7 @@ import SkipNavigation from "@/components/common/SkipNavigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kegler.dev"),
-  title: "Eduardo Kegler | Portfolio",
+  title: "Eduardo Kegler, Senior Frontend Engineer",
   description:
     "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
   keywords:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Eduardo Kegler | Portfolio",
+    title: "Eduardo Kegler, Senior Frontend Engineer",
     description:
       "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
     url: "https://kegler.dev",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eduardo Kegler | Portfolio",
+    title: "Eduardo Kegler, Senior Frontend Engineer",
     description:
       "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
   },
