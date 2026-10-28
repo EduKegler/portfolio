@@ -17,7 +17,7 @@ export default function Home() {
   const { contact } = resumeData;
 
   return (
-    <div className={clsx(displayFont.variable, labelFont.variable, "px-5 sm:px-8 lg:px-16 pb-24 font-[family-name:var(--font-label)] text-level1")}>
+    <div className={clsx(displayFont.variable, labelFont.variable, "px-5 sm:px-8 lg:px-16 pb-24 font-[family-name:var(--font-label)] text-level1 [&_:focus-visible]:rounded-sm [&_:focus-visible]:outline-2 [&_:focus-visible]:outline-offset-4 [&_:focus-visible]:outline-ink")}>
       <HomeHeader />
 
       <main id="main-content">
@@ -38,7 +38,7 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a
                 href={`mailto:${contact.email}`}
-                className="rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-[var(--ink-contrast)] transition-[filter] duration-200 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+                className="rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-[var(--ink-contrast)] transition-[filter] duration-200 hover:brightness-110"
               >
                 Email me
               </a>

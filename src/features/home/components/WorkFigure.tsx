@@ -16,7 +16,7 @@ export default function WorkFigure({ work, sizes, priority, hangHeight }: WorkFi
       <div className={clsx("flex items-center", hangHeight)}>
         <div
           className={clsx(
-            "w-full bg-white p-[clamp(6px,0.9vw,12px)] ring-1 ring-level1/10 shadow-[0_18px_40px_-18px_rgba(47,49,76,0.45),0_2px_6px_-2px_rgba(47,49,76,0.18)] dark:bg-[#1c1f2d] dark:ring-white/10 dark:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.8)]",
+            "w-full bg-white p-[clamp(6px,0.9vw,12px)] ring-1 ring-level1/10 shadow-[0_18px_40px_-18px_rgba(47,49,76,0.45),0_2px_6px_-2px_rgba(47,49,76,0.18)] dark:bg-level5 dark:ring-white/15 dark:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.9),0_18px_50px_-24px_rgba(150,160,220,0.18)]",
             work.orientation === "portrait" && "max-w-[220px]",
           )}
         >

@@ -84,7 +84,7 @@ export const works: Work[] = [
 ];
 
 export const highlightsByCompany: Record<string, string[]> = {
-  "NG.cash": ["151 → 22 Lambda instances", "~40% of a codebase removed"],
+  "NG.cash": ["151 → 22 Lambda instances", "~40% of an onboarding app's code removed"],
   "Liquid Labs": ["1M+ testnet users", "5 trading surfaces"],
   Coinbase: ["+35% sign-up conversion", "20% faster auth load"],
   Tech6: ["3,000 users", "Design system for 3 platforms"],
