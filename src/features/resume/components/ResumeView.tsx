@@ -1,9 +1,9 @@
-import DownloadPdfButton from "@/features/resume/components/DownloadPdfButton";
 import ResumeEducation from "@/features/resume/components/ResumeEducation";
 import ResumeHeader from "@/features/resume/components/ResumeHeader";
 import ResumeJob from "@/features/resume/components/ResumeJob";
 import ResumeSection from "@/features/resume/components/ResumeSection";
 import ResumeSkills from "@/features/resume/components/ResumeSkills";
+import ResumeTopBar from "@/features/resume/components/ResumeTopBar";
 import TextBase from "@/components/ui/TextBase";
 import styles from "@/features/resume/components/resume.module.css";
 import type { ResumeVariant } from "@/features/resume/data/variants";
@@ -19,7 +19,7 @@ export default function ResumeView({ variant }: ResumeViewProps) {
 
   return (
     <main id="main-content" className={styles.root}>
-      <DownloadPdfButton href={pdfHref} downloadName={pdfDownloadName} />
+      <ResumeTopBar pdfHref={pdfHref} downloadName={pdfDownloadName} />
       <ResumeHeader
         name={data.name}
         title={data.title}

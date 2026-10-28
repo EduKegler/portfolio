@@ -1,5 +1,7 @@
 import styles from "@/features/resume/components/resume.module.css";
 import type { Metadata, Viewport } from "next";
+import clsx from "clsx";
+import { displayFont, labelFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Eduardo Kegler | Resume",
@@ -25,5 +27,5 @@ export default function ResumeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className={styles.page}>{children}</div>;
+  return <div className={clsx(styles.page, displayFont.variable, labelFont.variable)}>{children}</div>;
 }

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { displayFont, labelFont } from "@/features/home/lib/fonts";
+import { displayFont, labelFont } from "@/lib/fonts";
 import { works } from "@/features/home/data/works";
 import { resumeData } from "@/features/resume/data/resume-data";
 import HomeHeader from "./HomeHeader";

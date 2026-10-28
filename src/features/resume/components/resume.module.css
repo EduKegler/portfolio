@@ -213,26 +213,120 @@
 
 .toolbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   gap: 12px;
   margin-bottom: 24px;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.homeLink {
+  color: var(--color-level2);
+  text-decoration: none;
+}
+
+.homeLink:hover {
+  color: var(--color-level1);
 }
 
 .downloadButton {
   font-family: inherit;
   font-size: 14px;
+  font-weight: 600;
   padding: 8px 18px;
-  border: 1px solid var(--color-level1);
   border-radius: 999px;
-  background: transparent;
-  color: var(--color-level1);
+  background: var(--color-ink);
+  color: var(--ink-contrast);
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.15s ease;
+  transition: filter 0.2s ease;
 }
 
 .downloadButton:hover {
-  opacity: 0.6;
+  filter: brightness(1.1);
+}
+
+@media screen {
+  .page {
+    background: transparent;
+  }
+
+  :global(html.dark) .page {
+    background: transparent;
+  }
+
+  .root {
+    font-family: var(--font-label), system-ui, sans-serif;
+    max-width: 580px;
+    box-sizing: content-box;
+    font-size: 16px;
+    padding: 24px 32px 96px;
+  }
+
+  .root :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  .name {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 2.75rem);
+    margin-top: 32px;
+  }
+
+  .title {
+    color: var(--color-level3);
+  }
+
+  .topRule {
+    border-top: 1px solid color-mix(in srgb, var(--color-level1) 15%, transparent);
+  }
+
+  .contactBlock a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--color-level1) 30%, transparent);
+  }
+
+  .sectionHeading,
+  .sectionHeadingTight {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--color-level1);
+    border-bottom-color: color-mix(in srgb, var(--color-level1) 15%, transparent);
+  }
+
+  .jobMeta,
+  .educationMeta {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .summary,
+  .bullet,
+  .skillLine,
+  .jobCompact,
+  .jobRole,
+  .education,
+  .languages {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .root {
+    padding: 16px 20px 72px;
+  }
 }
 
 @page {
