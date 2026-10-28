@@ -51,7 +51,7 @@ export const works: Work[] = [
     company: "Coinbase",
     years: "2021–2025",
     stack: ["React", "TypeScript", "OAuth/OIDC", "WCAG"],
-    note: "Accessible, responsive, cross-browser sign-in with OAuth for Apple, Google and Ethereum wallets.",
+    note: "Built accessible, responsive, cross-browser sign-in with OAuth for Apple, Google and Ethereum wallets.",
     outcome: "200,000 daily users",
     image: signIn,
     alt: "Coinbase wallet sign-in screen with a QR code",
@@ -75,7 +75,7 @@ export const works: Work[] = [
     company: "Tech6",
     years: "2019–2021",
     stack: ["React", "TypeScript", "GraphQL", "Storybook"],
-    note: "Real estate platform built with React, TypeScript and GraphQL, on an internal design system shared by 3 platforms.",
+    note: "Developed and maintained a real estate platform in React, TypeScript and GraphQL, and built its internal design system, shared by 3 platforms.",
     outcome: "3,000 users",
     image: intelliAgent,
     alt: "IntelliAgent dashboard with leads, activity and tasks",
@@ -85,7 +85,7 @@ export const works: Work[] = [
 
 export const highlightsByCompany: Record<string, string[]> = {
   "NG.cash": ["151 → 22 Lambda instances", "~40% of an onboarding app's code removed"],
-  "Liquid Labs": ["1M+ testnet users", "5 trading surfaces"],
+  "Liquid Labs": ["1M+ testnet users", "5 trading products"],
   Coinbase: ["+35% sign-up conversion", "20% faster auth load"],
   Tech6: ["3,000 users", "Design system for 3 platforms"],
 };

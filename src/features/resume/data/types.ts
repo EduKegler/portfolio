@@ -5,7 +5,6 @@ export type ResumeContactLink = {
 
 export type ResumeContact = {
   location: string;
-  phone: string;
   email: string;
   linkedin: ResumeContactLink;
   github: ResumeContactLink;

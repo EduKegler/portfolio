@@ -27,12 +27,12 @@ export default function Home() {
               I build the screens where people sign up, sign in and trade.
             </p>
             <p className="mt-6 max-w-[46ch] text-[17px] leading-[1.6] text-level2 text-pretty">
-              Senior Frontend Engineer, 8 years, the last 5 in crypto and fintech at{" "}
+              I'm a Senior Frontend Engineer with 8 years of experience, the last 5 in crypto and fintech at{" "}
               <span className="text-level1">Coinbase</span>, <span className="text-level1">Liquid Labs</span> and{" "}
               <span className="text-level1">NG.cash</span>. I own products end to end, from the RFC to the A/B test,
-              and the backend when a feature needs it. Recent work took GTE from zero to{" "}
-              <strong className="font-semibold text-level1">1M+ testnet users</strong> and Coinbase sign-up conversion
-              up <strong className="font-semibold text-level1">35%</strong>.
+              and work on the backend when a feature needs it. I took the GTE frontend from zero to{" "}
+              <strong className="font-semibold text-level1">1M+ testnet users</strong> and raised Coinbase sign-up conversion
+              by <strong className="font-semibold text-level1">35%</strong>.
             </p>
             <p className="mt-6 text-[15px] text-level3">Open to remote contract work. Florianópolis, Brazil (UTC-3).</p>
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">

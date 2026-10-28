@@ -36,10 +36,10 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            <span style={{ color: level1 }}>Trading surfaces, auth flows</span>
+            <span style={{ color: level1 }}>Trading apps, auth flows</span>
           </div>
           <div style={{ display: "flex" }}>
-            <span style={{ color: level1 }}>and frontend systems</span>
+            <span style={{ color: level1 }}>and design systems</span>
             <span>&nbsp;for crypto</span>
           </div>
           <div style={{ display: "flex" }}>and fintech products.</div>

@@ -110,10 +110,6 @@ const checks: Check[] = [
       const norm = pdf.text.replace(/\s+/g, " ");
       const fields = [
         { label: "email", value: resumeData.contact.email },
-        {
-          label: "phone",
-          value: resumeData.contact.phone.replace(/\s+/g, " "),
-        },
         { label: "portfolio", value: resumeData.contact.portfolio.label },
         { label: "linkedin", value: resumeData.contact.linkedin.label },
         { label: "github", value: resumeData.contact.github.label },

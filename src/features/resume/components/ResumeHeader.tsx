@@ -20,7 +20,7 @@ export default function ResumeHeader({ name, title, contact }: ResumeHeaderProps
       <hr className={styles.topRule} aria-hidden="true" />
       <address className={styles.contactBlock}>
         <TextBase as="p" color="inherit">
-          {`Location: ${contact.location} | Phone: ${contact.phone}`}
+          {`Location: ${contact.location}`}
         </TextBase>
         <TextBase as="p" color="inherit">
           Email: <a href={`mailto:${contact.email}`}>{contact.email}</a>

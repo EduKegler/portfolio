@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kegler.dev"),
   title: "Eduardo Kegler | Portfolio",
   description:
-    "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
+    "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
   keywords:
     "Eduardo Kegler, portfolio, Senior Frontend Engineer, React, React Native, TypeScript, Next.js, Web3, trading UI, authentication",
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Eduardo Kegler | Portfolio",
     description:
-      "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
+      "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
     url: "https://kegler.dev",
     siteName: "Eduardo Kegler Portfolio",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eduardo Kegler | Portfolio",
     description:
-      "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
+      "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
   },
 };
 
@@ -54,7 +54,7 @@ const jsonLd = {
       name: "Eduardo Kegler Portfolio",
       url: "https://kegler.dev",
       description:
-        "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
+        "Senior Frontend Engineer. Trading products, auth flows and design systems in React, TypeScript and Next.js.",
     },
   ],
 };

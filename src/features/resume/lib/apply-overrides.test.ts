@@ -7,7 +7,6 @@ const base: ResumeData = {
   title: "Frontend Engineer",
   contact: {
     location: "Brazil",
-    phone: "+55",
     email: "ana@example.com",
     linkedin: { label: "in/ana", url: "https://linkedin.com/in/ana" },
     github: { label: "gh/ana", url: "https://github.com/ana" },

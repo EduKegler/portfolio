@@ -64,12 +64,11 @@ const checks: Check[] = [
     },
   },
   {
-    name: "Contact details (email, phone, portfolio) present as text",
+    name: "Contact details (email, portfolio, profiles) present as text",
     run: (text, _numpages, data) => {
       const normalized = text.replace(/\s+/g, " ");
       const expected = [
         data.contact.email,
-        data.contact.phone.replace(/\s+/g, " "),
         data.contact.portfolio.label,
         data.contact.linkedin.label,
         data.contact.github.label,
