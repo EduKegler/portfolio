@@ -321,6 +321,14 @@
   .languages {
     font-size: 16px;
   }
+
+  .job {
+    margin-bottom: 36px;
+  }
+
+  .languages {
+    margin-top: 8px;
+  }
 }
 
 @media screen and (max-width: 480px) {

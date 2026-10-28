@@ -7,13 +7,13 @@ type WorkFigureProps = {
   work: Work;
   sizes: string;
   priority?: boolean;
-  hangHeight?: string;
+  className?: string;
 };
 
-export default function WorkFigure({ work, sizes, priority, hangHeight }: WorkFigureProps) {
+export default function WorkFigure({ work, sizes, priority, className }: WorkFigureProps) {
   return (
-    <figure id={work.id} className="scroll-mt-8">
-      <div className={clsx("flex items-center", hangHeight)}>
+    <figure id={work.id} className={clsx("scroll-mt-8", className)}>
+      <div className="flex items-end">
         <div
           className={clsx(
             "w-full bg-white p-[clamp(6px,0.9vw,12px)] ring-1 ring-level1/10 shadow-[0_18px_40px_-18px_rgba(47,49,76,0.45),0_2px_6px_-2px_rgba(47,49,76,0.18)] dark:bg-level5 dark:ring-white/15 dark:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.9),0_18px_50px_-24px_rgba(150,160,220,0.18)]",

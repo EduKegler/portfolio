@@ -22,7 +22,7 @@ export default function Home() {
 
       <main id="main-content">
         <section className="grid items-start gap-12 pt-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16 lg:pt-14">
-          <div className="lg:pt-6">
+          <div>
             <p className="font-[family-name:var(--font-display)] text-[clamp(2rem,1.2rem+2.4vw,3rem)] leading-[1.08] tracking-[-0.02em] text-balance">
               I build the screens where people sign up, sign in and trade.
             </p>
@@ -34,8 +34,8 @@ export default function Home() {
               <strong className="font-semibold text-level1">1M+ testnet users</strong> and raised Coinbase sign-up conversion
               by <strong className="font-semibold text-level1">35%</strong>.
             </p>
-            <p className="mt-6 text-[15px] text-level3">Open to remote contract work. Florianópolis, Brazil (UTC-3).</p>
-            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <p className="mt-8 text-[15px] text-level3">Open to remote contract work. Florianópolis, Brazil (UTC-3).</p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a
                 href={`mailto:${contact.email}`}
                 className="rounded-full bg-ink px-5 py-2.5 text-[15px] font-semibold text-[var(--ink-contrast)] transition-[filter] duration-200 hover:brightness-110"
@@ -61,14 +61,14 @@ export default function Home() {
             return (
               <div
                 key={pair[0].id}
-                className={clsx("grid gap-20 lg:gap-x-16", hasPortrait ? "lg:grid-cols-[220px_minmax(0,1fr)]" : "lg:grid-cols-2")}
+                className={clsx("grid gap-20 lg:grid-rows-[auto_auto] lg:gap-x-16 lg:gap-y-0", hasPortrait ? "lg:grid-cols-[220px_minmax(0,1fr)]" : "lg:grid-cols-2")}
               >
                 {pair.map((work) => (
                   <WorkFigure
                     key={work.id}
                     work={work}
                     sizes="(min-width: 1024px) 640px, 100vw"
-                    hangHeight={hasPortrait ? "lg:h-[460px]" : undefined}
+                    className="lg:row-span-2 lg:grid lg:grid-rows-subgrid"
                   />
                 ))}
               </div>
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="mt-28 grid gap-8 lg:mt-40 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+        <section id="contact" className="mt-28 grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <h2 className={sectionTitle}>Contact</h2>
           <div>
             <a
@@ -105,7 +105,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="mt-28 text-[13px] text-level3">© {resumeData.name}</footer>
+      <footer className="mt-20 text-[13px] text-level3 lg:mt-24">© {resumeData.name}</footer>
     </div>
   );
 }
