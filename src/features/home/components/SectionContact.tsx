@@ -2,13 +2,12 @@
 import TextBody from "@/components/ui/TextBody";
 import TextTitle2 from "@/components/ui/TextTitle2";
 import TextTitle3 from "@/components/ui/TextTitle3";
-import { memo } from "react";
 import ProfileImage from "@/assets/profile.jpg";
 import Image from "next/image";
 import TextDisplay2 from "@/components/ui/TextDisplay2";
 import { motion } from "motion/react";
 
-function SectionContact() {
+export default function SectionContact() {
   return (
     <motion.section
       className="px-4 lg:px-20 flex flex-col gap-4 lg:gap-10 w-full"
@@ -28,11 +27,9 @@ function SectionContact() {
         <TextDisplay2 color={"level1"}>Let&apos;s Connect</TextDisplay2>
         <div className="flex flex-col gap-10">
           <div>
+            <TextTitle2 as="p">Open to contract work and new projects.</TextTitle2>
             <TextTitle2 as="p">
-              Feel free to contact me if having any questions.
-            </TextTitle2>
-            <TextTitle2 as="p">
-              I&apos;m available for new projects or just for chatting.
+              Questions or just a chat, feel free to reach out.
             </TextTitle2>
           </div>
           <div className="flex flex-col lg:flex-row gap-6 lg:justify-between">
@@ -95,5 +92,3 @@ function SectionContact() {
     </motion.section>
   );
 }
-
-export default memo(SectionContact);

@@ -3,9 +3,8 @@
 import clsx from "clsx";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { memo } from "react";
 
-function ResumeLink() {
+export default function ResumeLink() {
   return (
     <motion.div
       whileHover={{ scale: 1.025 }}
@@ -27,4 +26,3 @@ function ResumeLink() {
   );
 }
 
-export default memo(ResumeLink);

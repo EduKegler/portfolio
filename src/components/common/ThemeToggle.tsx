@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const springConfig = { type: "spring" as const, stiffness: 200, damping: 30 };
 
@@ -17,7 +17,7 @@ const rayLines = [
   { x1: 19.78, y1: 4.22, x2: 18.36, y2: 5.64 },
 ];
 
-function ThemeToggle(): React.ReactNode {
+export default function ThemeToggle(): React.ReactNode {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -99,5 +99,3 @@ function ThemeToggle(): React.ReactNode {
     </button>
   );
 }
-
-export default memo(ThemeToggle);

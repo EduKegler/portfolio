@@ -1,6 +1,5 @@
 "use client";
 import TextTitle1 from "@/components/ui/TextTitle1";
-import { memo } from "react";
 import Project, { ProjectProps } from "./Project";
 import Divider from "@/components/ui/Divider";
 import AppSwitcher from "@/assets/projects/app-switcher.png";
@@ -17,23 +16,21 @@ const projects: Omit<ProjectProps, "order">[] = [
     image: GTE,
     description: (
       <>
-        gte.xyz is an all-in-one DeFi platform built on the MegaETH network,
-        combining a portfolio tracker, AMM, token launchpad, central limit order
-        book (CLOB), and perpetuals trading into a unified interface.
+        gte.xyz is a DeFi trading platform on MegaETH: portfolio tracker, AMM,
+        token launchpad, central limit order book (CLOB) and perpetuals in one
+        app.
         <br />
         <br />
-        I led the front-end development using React, TypeScript, and Web3
-        technologies, delivering modular components and seamless wallet
-        connectivity. The platform provides real-time insights into wallet
-        balances, PnL, and open positions, while enabling users to trade, swap,
-        and explore new tokens, all in one place.
+        As the <strong>sole frontend engineer</strong>, I built all 5 surfaces
+        from zero to a public testnet used by{" "}
+        <strong>over 1 million users</strong> in under a year.
         <br />
         <br />
-        This integrated experience enhances accessibility to advanced DeFi tools
-        while maintaining performance and usability.
+        Wallet login and transactions run on Privy and Viem. Balances, PnL,
+        positions and orders update in real time over WebSockets.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript", "Web3", "Next.js", "Viem", "Privy"],
+    tags: ["React", "TypeScript", "Next.js", "Viem", "Privy", "WebSockets", "Zustand", "TanStack Query"],
   },
   {
     name: "App Switcher",
@@ -41,51 +38,40 @@ const projects: Omit<ProjectProps, "order">[] = [
     image: AppSwitcher,
     description: (
       <>
-        <strong>App Switcher</strong> is an innovative tool designed to enhance
-        user navigation across various Coinbase products, including HelpCenter,
-        Coinbase Tracer, and Commerce. Developed using React and TypeScript, it
-        offers an intuitive and responsive interface, simplifying access to
-        multiple services within the Coinbase ecosystem.
+        <strong>App Switcher</strong> lets Coinbase users move between products,
+        like Help Center and Tracer, from a single menu.
         <br />
         <br />
-        Since its launch, approximately{" "}
-        <strong>0.45% of Coinbase&apos;s</strong> retail web users have utilized
-        the App Switcher to seamlessly transition between products, thereby
-        boosting cross-product engagement and providing a more integrated user
-        experience.
+        I built it in React and TypeScript, with i18n and Amplitude analytics,
+        and worked with each product team to integrate it.
         <br />
         <br />
-        In addition to leading its development, I collaborated with multiple
-        teams to ensure the App Switcher was effectively integrated across the
-        platform, meeting the specific needs of each product and delivering a
-        cohesive user experience.
+        An A/B test measured a <strong>0.45% lift</strong> in cross-product
+        engagement among retail web users.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript", "GraphQL"],
+    tags: ["React", "TypeScript", "GraphQL", "i18n", "Amplitude"],
   },
   {
-    name: "Sign In with Wallet",
+    name: "Sign In",
     company: "Coinbase",
     image: SignIn,
     description: (
       <>
-        This project aimed to align with Coinbase Identity&apos;s vision of
-        bridging the gap between <strong>Web3 and the traditional web</strong>,
-        ensuring seamless integration and user experience.
+        Coinbase sign-in for around <strong>200,000 daily users</strong>, with
+        OAuth for Apple and Google and sign-in with an Ethereum wallet, such as
+        Coinbase Wallet, MetaMask or WalletConnect.
         <br />
         <br />
-        I led the front-end implementation of third-party OAuth authentication,
-        enabling login with Apple and Google. Developed using React, TypeScript,
-        and Web3 standards, this solution empowers users to securely log in via
-        popular crypto wallets like Coinbase Wallet, MetaMask, or WalletConnect.
+        I built the flows in React and TypeScript, accessible (WCAG) and
+        cross-browser.
         <br />
         <br />
-        The system offers a streamlined onboarding process with a user-friendly
-        interface, enhancing accessibility for decentralized applications while
-        maintaining robust security protocols.
+        Rendering and caching work on these flows cut load time by{" "}
+        <strong>20%</strong>.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript", "Web3", "OAuth", "Wagmi", "Viem"],
+    tags: ["React", "TypeScript", "OAuth/OIDC", "Wagmi", "Viem", "WCAG"],
   },
   {
     name: "Unified Sign Up",
@@ -93,50 +79,44 @@ const projects: Omit<ProjectProps, "order">[] = [
     image: SignUp,
     description: (
       <>
-        Unified Sign Up 2.0 was designed to unify and simplify the account
-        creation process across all Coinbase products, ensuring a consistent and
-        seamless experience for users.
-        <br />
-        <br />I led the development of Unified Sign Up 2.0, integrating{" "}
-        <strong>Sign Up with Google</strong> and{" "}
-        <strong>Sign Up with Apple</strong> to offer secure and flexible
-        onboarding options. Built with React and TypeScript, the system delivers
-        an intuitive, responsive interface and supports scalability to
-        accommodate Coinbase&apos;s extensive suite of products, such as
-        Coinbase Wallet, Coinbase Commerce, and more.
+        Unified Signup 2.0 is one account creation flow shared across Coinbase
+        products.
         <br />
         <br />
-        This unified solution reflects Coinbase&apos;s vision of providing a
-        cohesive user journey, enhancing accessibility, and streamlining the
-        onboarding process for its global user base.
+        I led it, adding sign-up with Apple and Google and A/B testing the new
+        flows behind feature flags.
+        <br />
+        <br />
+        Sign-up conversion went up <strong>35%</strong>.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript"],
+    tags: ["React", "TypeScript", "Feature Flags", "A/B Testing", "Amplitude"],
   },
   {
     name: "IntelliAgent",
-    company: "Fathom Realty",
+    company: "Tech6, for Fathom Realty",
     image: Fathom,
     description: (
       <>
-        IntelliAgent is a real estate operations platform built for agents at
-        Fathom Realty in North Carolina.
+        IntelliAgent is a real estate operations platform for Fathom Realty
+        agents in North Carolina: prospecting, fee tracking and deal management
+        in one place.
         <br />
         <br />
-        It streamlines the full transaction workflow. Client prospecting, fee
-        tracking, and end-to-end deal management, tailored to the daily needs of
-        real estate professionals.
+        I built it in React, TypeScript and GraphQL for about{" "}
+        <strong>3,000 users</strong>, and designed the internal design system
+        it shares with 2 other platforms.
         <br />
-        <br />I designed and implemented the entire design system and led the
-        front-end architecture using React and TypeScript, creating reusable
-        components and consistent UI patterns to support scalability, usability,
-        and team collaboration.
+        <br />
+        I also replaced a manual process with automatic invoice generation for
+        every transaction.
       </>
     ),
-    tags: ["React", "Typescript", "Javascript", "Redux", "Tailwind"],
+    tags: ["React", "TypeScript", "GraphQL", "Redux", "Tailwind", "Storybook"],
   },
 ];
-function SectionProjects() {
+
+export default function SectionProjects() {
   return (
     <section className="px-4 lg:px-20 flex flex-col gap-10 lg:gap-20 overflow-hidden">
       <TextTitle1>Projects</TextTitle1>
@@ -170,5 +150,3 @@ function SectionProjects() {
     </section>
   );
 }
-
-export default memo(SectionProjects);

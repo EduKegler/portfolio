@@ -9,7 +9,7 @@ export default function Header() {
       id="about"
     >
       <TextLabel1 className="whitespace-nowrap">
-        Senior Software Engineer
+        Senior Frontend Engineer
       </TextLabel1>
       <Divider />
       <div className="flex items-center gap-2 lg:gap-6 shrink-0">

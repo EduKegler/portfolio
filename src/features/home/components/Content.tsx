@@ -31,8 +31,8 @@ export default function Content() {
           </div>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start lg:items-center">
             <TextTitle2 as="p">
-              Senior Software Engineer passionate about building reusable
-              frontend architectures and driving innovation.
+              Senior Frontend Engineer building trading surfaces, auth flows
+              and frontend systems for crypto and fintech products.
             </TextTitle2>
             <ResumeLink />
           </div>

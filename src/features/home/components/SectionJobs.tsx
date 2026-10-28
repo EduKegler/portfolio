@@ -11,9 +11,9 @@ export default function SectionJobs() {
       <TextLabel1 className="flex-2">EXPERIENCE</TextLabel1>
       <div className="flex flex-10 flex-col gap-10 lg:gap-20">
         <TextTitle2 as="p">
-          Senior Frontend Engineer with 8+ years of experience building
-          high-performance, scalable web applications across Real Estate, Work
-          Safety, and Cryptocurrency sectors.
+          Senior Frontend Engineer with 8 years of experience, the last 5 in
+          crypto and fintech. Before that, real estate and work safety
+          software.
         </TextTitle2>
         <div className="flex flex-col gap-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-y-10">

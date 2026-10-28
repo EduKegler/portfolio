@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kegler.dev"),
   title: "Eduardo Kegler | Portfolio",
   description:
-    "Showcasing my work as a software engineer specializing in React, Typescript and Next.js.",
+    "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
   keywords:
-    "Eduardo Kegler, portfolio, web developer, Next.js, React, TypeScript, PostgreSQL, Software Engineer",
+    "Eduardo Kegler, portfolio, Senior Frontend Engineer, React, React Native, TypeScript, Next.js, Web3, trading UI, authentication",
   alternates: {
     canonical: "/",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Eduardo Kegler | Portfolio",
     description:
-      "Explore my projects and skills as a software engineer specializing in React.",
+      "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
     url: "https://kegler.dev",
     siteName: "Eduardo Kegler Portfolio",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eduardo Kegler | Portfolio",
     description:
-      "Discover my latest projects as a software engineer specializing in React.",
+      "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
     images: ["/og-image.png"],
   },
 };
@@ -49,7 +49,7 @@ const jsonLd = {
     {
       "@type": "Person",
       name: "Eduardo Kegler",
-      jobTitle: "Senior Software Engineer",
+      jobTitle: "Senior Frontend Engineer",
       url: "https://kegler.dev",
       email: "eduardokegler1@gmail.com",
       image: "https://kegler.dev/og-image.png",
@@ -63,7 +63,7 @@ const jsonLd = {
       name: "Eduardo Kegler Portfolio",
       url: "https://kegler.dev",
       description:
-        "Showcasing my work as a software engineer specializing in React, Typescript and Next.js.",
+        "Senior Frontend Engineer. Trading surfaces, auth flows and frontend systems in React, TypeScript and Next.js.",
     },
   ],
 };
