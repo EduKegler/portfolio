@@ -327,6 +327,14 @@
   .root {
     padding: 16px 20px 72px;
   }
+
+  .contactItem {
+    display: block;
+  }
+
+  .contactSeparator {
+    display: none;
+  }
 }
 
 @page {

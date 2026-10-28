@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { ResumeContact } from "@/features/resume/data";
 import TextBase from "@/components/ui/TextBase";
 import styles from "./resume.module.css";
@@ -9,6 +10,12 @@ type ResumeHeaderProps = {
 };
 
 export default function ResumeHeader({ name, title, contact }: ResumeHeaderProps) {
+  const profiles = [
+    { name: "LinkedIn", link: contact.linkedin },
+    { name: "GitHub", link: contact.github },
+    { name: "Portfolio", link: contact.portfolio },
+  ];
+
   return (
     <header className={styles.header}>
       <TextBase as="h1" color="inherit" className={styles.name}>
@@ -26,30 +33,17 @@ export default function ResumeHeader({ name, title, contact }: ResumeHeaderProps
           Email: <a href={`mailto:${contact.email}`}>{contact.email}</a>
         </TextBase>
         <TextBase as="p" color="inherit">
-          LinkedIn:{" "}
-          <a
-            href={contact.linkedin.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {contact.linkedin.label}
-          </a>
-          {" | GitHub: "}
-          <a
-            href={contact.github.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {contact.github.label}
-          </a>
-          {" | Portfolio: "}
-          <a
-            href={contact.portfolio.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {contact.portfolio.label}
-          </a>
+          {profiles.map(({ name, link }, index) => (
+            <Fragment key={name}>
+              {index > 0 && <span className={styles.contactSeparator}>{" | "}</span>}
+              <span className={styles.contactItem}>
+                {`${name}: `}
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              </span>
+            </Fragment>
+          ))}
         </TextBase>
       </address>
     </header>

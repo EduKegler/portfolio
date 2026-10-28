@@ -12,11 +12,11 @@ export default function HomeHeader() {
           {resumeData.title}
         </span>
       </h1>
-      <nav aria-label="Main" className="flex items-center gap-5 lg:gap-7 text-level2">
-        <a href="#work" className="hidden sm:inline hover:text-level1">Work</a>
-        <a href="#experience" className="hidden sm:inline hover:text-level1">Experience</a>
-        <Link href="/resume" className="hover:text-level1">CV</Link>
-        <a href={`mailto:${resumeData.contact.email}`} className="hover:text-level1">Email</a>
+      <nav aria-label="Main" className="flex shrink-0 items-center gap-5 lg:gap-7 text-level2">
+        <a href="#work" className="-m-2 hidden p-2 hover:text-level1 sm:inline">Work</a>
+        <a href="#experience" className="-m-2 hidden p-2 hover:text-level1 sm:inline">Experience</a>
+        <Link href="/resume" className="-m-2 p-2 hover:text-level1">CV</Link>
+        <a href={`mailto:${resumeData.contact.email}`} className="-m-2 p-2 hover:text-level1">Email</a>
         <ThemeToggle />
       </nav>
     </header>
