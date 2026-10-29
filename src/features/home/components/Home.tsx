@@ -24,7 +24,8 @@ export default function Home() {
         <section className="grid items-start gap-12 pt-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16 lg:pt-14">
           <div>
             <p className="font-[family-name:var(--font-display)] text-[clamp(2rem,1.2rem+2.4vw,3rem)] leading-[1.08] tracking-[-0.02em] text-balance">
-              I build the screens where people sign up, sign in and trade.
+              I build <span className="whitespace-nowrap">sign-in flows</span> and{" "}
+              <span className="whitespace-nowrap">trading interfaces</span> for crypto and fintech.
             </p>
             <p className="mt-6 max-w-[46ch] text-[17px] leading-[1.6] text-level2 text-pretty">
               I&apos;m a Senior Frontend Engineer with 8 years of experience, the last 5 in crypto and fintech at{" "}

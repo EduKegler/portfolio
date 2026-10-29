@@ -267,7 +267,7 @@
       "kind": "custom",
       "refersTo": "display",
       "description": "The one serif sentence at display size.",
-      "html": "<p class=\"ds-wall\">I build the screens where people sign up, sign in and trade.</p>",
+      "html": "<p class=\"ds-wall\">I build sign-in flows and trading interfaces for crypto and fintech.</p>",
       "css": ".ds-wall{margin:0;max-width:16ch;font:400 clamp(2rem,1.2rem + 2.4vw,3rem)/1.08 'Brygada 1918',Georgia,serif;letter-spacing:-0.02em;color:var(--level1,#2f314c);text-wrap:balance}"
     }
   ],
